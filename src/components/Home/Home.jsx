@@ -2,7 +2,7 @@ import React from 'react';
 import TodoForm from '../TodoForm/TodoForm.jsx';
 import TodoList from '../TodoList/TodoList.jsx';
 
-function Garden() {
+function Home() {
 
   return(
     <div>
@@ -14,4 +14,4 @@ function Garden() {
   )
 }
 
-export default Garden;
+export default Home;
