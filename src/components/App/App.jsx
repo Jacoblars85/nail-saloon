@@ -1,5 +1,5 @@
 import React from 'react';
-import Todo from '../Todo/Todo.jsx';
+import Home from '../Home/Home.jsx';
 import './App.css';
 
 function App (){
@@ -8,7 +8,7 @@ function App (){
       
       <h1 className="App-header">Welcome to React!</h1>
 
-      <Todo />
+      <Home />
     </div>
   )
 }
