@@ -1,5 +1,5 @@
 import React from 'react';
-import TodoForm from '../TodoForm/TodoForm.jsx';
+import TodoForm from '../SceduleForm/SceduleForm.jsx';
 import TodoList from '../TodoList/TodoList.jsx';
 
 function Home() {
@@ -8,8 +8,8 @@ function Home() {
     <div>
       <h2>This is the todo list!</h2>
 
-      <TodoForm />
-      <TodoList />
+      {/* <TodoForm /> */}
+      {/* <TodoList /> */}
 
       <Link to="/about">
         <button>Scedule Now</button>
