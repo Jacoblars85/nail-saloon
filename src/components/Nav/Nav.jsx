@@ -13,6 +13,9 @@ function Nav() {
       <Link to="/home">
         <h2 className="nav-title">Nail Saloon</h2>
       </Link>
+      <Link to="/about">
+        <h2 className="nav-title">About Us</h2>
+      </Link>
     </div>
   );
 }
