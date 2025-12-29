@@ -10,6 +10,10 @@ function Home() {
 
       <TodoForm />
       <TodoList />
+
+      <Link to="/about">
+        <button>Scedule Now</button>
+      </Link>
     </div>
   )
 }
