@@ -1,8 +1,8 @@
 import React from 'react';
 import Home from '../Home/Home.jsx';
 import About from '../AboutPage/AboutPage.jsx';
-import ScedulePage from '../ScedulePage/ScedulePage.jsx';
-import SceduleForm from '../SceduleForm/SceduleForm.jsx';
+import SchedulePage from '../SchedulePage/SchedulePage.jsx';
+import ScheduleForm from '../ScheduleForm/ScheduleForm.jsx';
 import './App.css';
 
 function App (){
@@ -20,9 +20,9 @@ function App (){
           <About />
         </Route>
 
-        <Route path="/scedule" exact>
-          <ScedulePage />
-          <SceduleForm />
+        <Route path="/schedule" exact>
+          <SchedulePage />
+          <ScheduleForm />
         </Route>
       </Router>
 

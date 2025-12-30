@@ -1,6 +1,6 @@
 import React from 'react';
-import SceduleForm from '../SceduleForm/SceduleForm.jsx';
-import ScedulePage from '../ScedulePage/ScedulePage.jsx';
+import SceduleForm from '../ScheduleForm/ScheduleForm.jsx';
+import ScedulePage from '../SchedulePage/SchedulePage.jsx';
 
 function Home() {
 
@@ -8,8 +8,8 @@ function Home() {
     <div>
       <h2>This is the nail saloon</h2>
 
-      <Link to="/about">
-        <button>Scedule Now</button>
+      <Link to="/schedule">
+        <button>Schedule Now</button>
       </Link>
     </div>
   )
