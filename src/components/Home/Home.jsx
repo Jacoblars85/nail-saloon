@@ -1,6 +1,6 @@
 import React from 'react';
 import TodoForm from '../SceduleForm/SceduleForm.jsx';
-import TodoList from '../TodoList/TodoList.jsx';
+import TodoList from '../ScedulePage/ScedulePage.jsx';
 
 function Home() {
 
