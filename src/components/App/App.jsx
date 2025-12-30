@@ -8,7 +8,17 @@ function App (){
       
       <h1 className="App-header">Nail Saloon</h1>
 
-      <Home />
+      <Router>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+
+        <Route path="/about" exact>
+          <Details />
+        </Route>
+      </Router>
+
+      
     </div>
   )
 }
