@@ -1,5 +1,8 @@
 import React from 'react';
 import Home from '../Home/Home.jsx';
+import About from '../AboutPage/AboutPage.jsx';
+import ScedulePage from '../ScedulePage/ScedulePage.jsx';
+import SceduleForm from '../SceduleForm/SceduleForm.jsx';
 import './App.css';
 
 function App (){
@@ -14,7 +17,12 @@ function App (){
         </Route>
 
         <Route path="/about" exact>
-          <Details />
+          <About />
+        </Route>
+
+        <Route path="/scedule" exact>
+          <ScedulePage />
+          <SceduleForm />
         </Route>
       </Router>
 
