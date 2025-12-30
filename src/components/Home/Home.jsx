@@ -1,6 +1,6 @@
 import React from 'react';
-import SceduleForm from '../ScheduleForm/ScheduleForm.jsx';
-import ScedulePage from '../SchedulePage/SchedulePage.jsx';
+import ScheduleForm from '../ScheduleForm/ScheduleForm.jsx';
+import SchedulePage from '../SchedulePage/SchedulePage.jsx';
 
 function Home() {
 
