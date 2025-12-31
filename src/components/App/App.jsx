@@ -1,4 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import {
+  HashRouter as Router,
+  Route,
+} from 'react-router-dom';
 import Home from '../Home/Home.jsx';
 import About from '../AboutPage/AboutPage.jsx';
 import SchedulePage from '../SchedulePage/SchedulePage.jsx';
