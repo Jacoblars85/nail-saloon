@@ -1,12 +1,10 @@
 .nav {
-  /* flex box layout */
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 0 0 10px;
+  /* align-items: center; */
+  /* margin: 0 0 10px; */
   background-color: #353838;
   overflow: hidden;
-  opacity: 70%;
   height: 12.5dvh;
 }
 
@@ -24,7 +22,8 @@
 }
 
 .nav-title h1 {
-  font-size: larger;
+  font-size: 100px;
+  color: aqua;
 }
 
 .navLink {
