@@ -18,6 +18,10 @@
   margin: 0;
 }
 
+.nav-title:hover{
+  color: #868a8a;
+}
+
 .nav-title h1 {
   font-size: larger;
 }
