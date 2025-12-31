@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
-import ScheduleForm from '../ScheduleForm/ScheduleForm.jsx';
-import SchedulePage from '../SchedulePage/SchedulePage.jsx';
+import ScheduleForm from "../ScheduleForm/ScheduleForm.jsx";
+import SchedulePage from "../SchedulePage/SchedulePage.jsx";
 
 function Home() {
-
-  return(
+  return (
     <div>
       <h2>This is the nail saloon</h2>
 
@@ -13,7 +12,7 @@ function Home() {
         <button>Schedule Now</button>
       </Link>
     </div>
-  )
+  );
 }
 
 export default Home;
