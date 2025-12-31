@@ -13,12 +13,14 @@ function Nav() {
       <Link to="/home">
         <h1 className="nav-title">Nail Saloon</h1>
       </Link>
-      <Link to="/schedule">
-        <h2 className="nav-title">Schedule</h2>
-      </Link>
-      <Link to="/about">
-        <h2 className="nav-title">About Us</h2>
-      </Link>
+      <div>
+        <Link to="/schedule">
+          <h2 className="nav-title">Schedule</h2>
+        </Link>
+        <Link to="/about">
+          <h2 className="nav-title">About Us</h2>
+        </Link>
+      </div>
     </div>
   );
 }
