@@ -13,7 +13,7 @@ function Nav() {
       <Link to="/home">
         <h1 className="nav-title">Nail Saloon</h1>
       </Link>
-      <div>
+      <div className="smallNavBox">
         <Link to="/schedule">
           <h2 className="nav-title">Schedule</h2>
         </Link>
