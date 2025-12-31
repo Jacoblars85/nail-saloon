@@ -11,7 +11,10 @@ function Nav() {
   return (
     <div className="nav">
       <Link to="/home">
-        <h2 className="nav-title">Nail Saloon</h2>
+        <h1 className="nav-title">Nail Saloon</h1>
+      </Link>
+      <Link to="/schedule">
+        <h2 className="nav-title">Schedule</h2>
       </Link>
       <Link to="/about">
         <h2 className="nav-title">About Us</h2>
