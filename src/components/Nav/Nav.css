@@ -20,6 +20,7 @@
 
 .nav-title:hover{
   color: #868a8a;
+  cursor: pointer;
 }
 
 .nav-title h1 {
@@ -43,6 +44,7 @@
 
 .navLink:hover {
   background-color: #868a8a;
+  cursor: pointer;
 }
 
 .smallNavBox {
