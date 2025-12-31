@@ -13,7 +13,7 @@ function App() {
       {/* <h1 className="App-header">Nail Saloon</h1> */}
 
       <Router>
-      <Nav />
+        <Nav />
 
         <Route path="/" exact>
           <Home />
