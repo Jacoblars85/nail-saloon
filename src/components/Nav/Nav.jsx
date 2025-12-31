@@ -10,7 +10,7 @@ function Nav() {
 
   return (
     <div className="nav">
-      <Link to="/home">
+      <Link to="/">
         <h1 className="nav-title">Nail Saloon</h1>
       </Link>
       <div className="smallNavBox">
