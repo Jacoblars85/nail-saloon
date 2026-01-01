@@ -1,34 +1,33 @@
-import { useSelector, useDispatch } from 'react-redux'
-import React, { useState } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import React, { useState } from "react";
 
 function ScheduleForm() {
-    const [nameInput, setNameInput] = useState('')
+  const [nameInput, setNameInput] = useState("");
 
-    const dispatch = useDispatch()
-    
-    
-    const addAppointment = (e) => {
-        e.preventDefault();
-    
-        dispatch({
-          type: 'CREATE_AIRLINE',
-          payload: nameInput
-        })
-        setAirlineInput('')
-      }
+  const dispatch = useDispatch();
 
-    return (
-        <div>
-        <form onSubmit={addAppointment}>
-        <input 
+  const addAppointment = (e) => {
+    e.preventDefault();
+
+    dispatch({
+      type: "CREATE_AIRLINE",
+      payload: nameInput,
+    });
+    setAirlineInput("");
+  };
+
+  return (
+    <div>
+      <form onSubmit={addAppointment}>
+        <input
           value={nameInput}
           onChange={(e) => setNameInput(e.target.value)}
-          placeholder='Name'
+          placeholder="Name"
         />
-      <button>Add Appointment</button>
+        <button>Add Appointment</button>
       </form>
-      </div>
-    )
+    </div>
+  );
 }
 
 export default ScheduleForm;
