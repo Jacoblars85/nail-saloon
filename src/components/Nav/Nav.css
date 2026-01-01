@@ -13,10 +13,9 @@
   color: #f2f2f2;
   padding: 10px 10px;
   margin: 0;
-  
 }
 
-.nav-title:hover{
+.nav-title:hover {
   color: #868a8a;
   cursor: pointer;
 }
