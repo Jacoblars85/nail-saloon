@@ -5,7 +5,6 @@ function ScheduleForm() {
   const [nameInput, setNameInput] = useState("");
   const [numberInput, setNumberInput] = useState("");
 
-
   const dispatch = useDispatch();
 
   const addAppointment = (e) => {
