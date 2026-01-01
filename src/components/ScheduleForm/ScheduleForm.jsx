@@ -1,16 +1,51 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+// import React, { useState } from "react";
+// import { useDispatch } from "react-redux";
 
-const TodoForm = () => {
-  const dispatch = useDispatch();
+// const  = () => {
+//   const dispatch = useDispatch();
 
-  return (
-    <div>
-      <h3>This is the form</h3>
+//   return (
+//     <div>
+//       <h3>This is the form</h3>
 
-      <p>type stuff here</p>
-    </div>
-  );
-};
+//       <p>type stuff here</p>
+//     </div>
+//   );
+// };
 
-export default TodoForm;
+// export default TodoForm;
+
+import { useSelector, useDispatch } from 'react-redux'
+import React, { useState } from 'react';
+
+function ScheduleForm() {
+    const [nameInput, setNameInput] = useState('')
+
+    const dispatch = useDispatch()
+    
+    
+    const addAppointment = (e) => {
+        e.preventDefault();
+    
+        dispatch({
+          type: 'CREATE_AIRLINE',
+          payload: nameInput
+        })
+        setAirlineInput('')
+      }
+
+    return (
+        <div>
+        <form onSubmit={addAppointment}>
+        <input 
+          value={nameInput}
+          onChange={(e) => setNameInput(e.target.value)}
+          placeholder='Name'
+        />
+      <button>Add Appointment</button>
+      </form>
+      </div>
+    )
+}
+
+export default ScheduleForm;
