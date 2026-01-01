@@ -28,3 +28,12 @@ body,
 pre {
   white-space: pre-wrap;
 }
+
+.aboutPage {
+    display: flex;
+  justify-content: center;
+  text-align: center;
+  /* align-items: end; */
+  background-color: #e1e4e4;
+  /* height: 12.5dvh; */
+}
