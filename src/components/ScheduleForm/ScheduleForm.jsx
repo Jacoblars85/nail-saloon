@@ -3,6 +3,8 @@ import React, { useState } from "react";
 
 function ScheduleForm() {
   const [nameInput, setNameInput] = useState("");
+  const [numberInput, setNumberInput] = useState("");
+
 
   const dispatch = useDispatch();
 
@@ -23,6 +25,11 @@ function ScheduleForm() {
           value={nameInput}
           onChange={(e) => setNameInput(e.target.value)}
           placeholder="Name"
+        />
+        <input
+          value={numberInput}
+          onChange={(e) => setNumberInput(e.target.value)}
+          placeholder="Phone Number"
         />
         <button>Add Appointment</button>
       </form>
