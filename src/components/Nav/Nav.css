@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   text-align: center;
-  /* align-items: center; */
+  align-items: end;
   background-color: #353838;
   height: 12.5dvh;
 }
@@ -20,9 +20,9 @@
   cursor: pointer;
 }
 
-.nav-title h1 {
-  font-size: 100px;
-  color: aqua;
+.nav h1 {
+  font-size: 10dvh;
+  padding: 0;
 }
 
 .navLink {
