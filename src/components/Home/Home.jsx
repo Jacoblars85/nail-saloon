@@ -8,11 +8,15 @@ function Home() {
     <div className="HomePage">
       <h2>This is the nail saloon</h2>
 
-<div className="HomeBigBox">
-      <div className="HomeLeftBox"></div>
+      <div className="HomeBigBox">
+        <div className="HomeLeftBox">
+          <img src="" alt="" />
+        </div>
 
-      <div className="HomeRightBox"></div>
-</div>
+        <div className="HomeRightBox">
+          <img src="" alt="" />
+        </div>
+      </div>
       <Link to="/schedule">
         <button>Schedule Now</button>
       </Link>
