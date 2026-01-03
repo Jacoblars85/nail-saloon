@@ -30,13 +30,17 @@ pre {
 }
 
 .aboutPage {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
   justify-content: start;
-    align-items: center;
+  align-items: center;
   text-align: center;
   background-color: #e1e4e4;
   width: 100dvw;
   height: 100dvh;
-  /* padding: 10px; */
+}
+
+.aboutPage p {
+  padding: 15px;
+  font-size: larger;
 }
