@@ -29,7 +29,7 @@ pre {
   white-space: pre-wrap;
 }
 
-.aboutPage {
+.HomePage {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -40,7 +40,18 @@ pre {
   height: 100dvh;
 }
 
-.aboutPage p {
+.AboutPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  background-color: #e1e4e4;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+.AboutPage p {
   padding: 15px;
   font-size: larger;
 }
