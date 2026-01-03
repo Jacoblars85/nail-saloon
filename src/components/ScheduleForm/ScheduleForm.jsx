@@ -2,23 +2,24 @@ import { useSelector, useDispatch } from "react-redux";
 import React, { useState } from "react";
 
 function ScheduleForm() {
+  const dispatch = useDispatch();
+
   const [nameInput, setNameInput] = useState("");
   const [numberInput, setNumberInput] = useState("");
-
-  const dispatch = useDispatch();
 
   const addAppointment = (e) => {
     e.preventDefault();
 
     dispatch({
-      type: "CREATE_AIRLINE",
-      payload: nameInput,
+      type: "CREATE_APPOINTMENT",
+      payload: { nameInput: nameInput, numberInput: numberInput },
     });
-    setAirlineInput("");
+    setNameInput("");
+    setNumberInput("");
   };
 
   return (
-    <div>
+    <div className="ScheduleForm">
       <form onSubmit={addAppointment}>
         <input
           value={nameInput}
@@ -30,7 +31,7 @@ function ScheduleForm() {
           onChange={(e) => setNumberInput(e.target.value)}
           placeholder="Phone Number"
         />
-        <button>Add Appointment</button>
+        <button>Create Appointment</button>
       </form>
     </div>
   );
