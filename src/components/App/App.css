@@ -31,9 +31,12 @@ pre {
 
 .aboutPage {
     display: flex;
-  justify-content: center;
+    flex-direction: column;
+  justify-content: start;
+    align-items: center;
   text-align: center;
-  /* align-items: end; */
   background-color: #e1e4e4;
-  /* height: 12.5dvh; */
+  width: 100dvw;
+  height: 100dvh;
+  /* padding: 10px; */
 }
