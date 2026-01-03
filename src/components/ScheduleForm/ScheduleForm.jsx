@@ -19,8 +19,7 @@ function ScheduleForm() {
   };
 
   return (
-    <div className="ScheduleForm">
-      <form onSubmit={addAppointment}>
+      <form className="formPanel" onSubmit={addAppointment}>
         <input
           value={nameInput}
           onChange={(e) => setNameInput(e.target.value)}
@@ -33,7 +32,6 @@ function ScheduleForm() {
         />
         <button>Create Appointment</button>
       </form>
-    </div>
   );
 }
 
