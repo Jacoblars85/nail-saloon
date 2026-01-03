@@ -37,6 +37,30 @@ pre {
 }
 
 /* --------------------------------------------------------------------------------
+Form Treatment
+-------------------------------------------------------------------------------- */
+
+.formPanel {
+  box-sizing: border-box;
+  width: 600px;
+  height: 325px;
+  max-width: 100%;
+  padding: 25px;
+  margin: 0 auto 20px;
+  margin-top: 40px;
+  background-color: #efefef;
+  border: 2px solid black;
+  border-radius: 3px;
+  text-align: center;
+  z-index: 1;
+}
+
+/* input {
+  margin: 5px;
+  margin-bottom: 10px;
+} */
+
+/* --------------------------------------------------------------------------------
 Button
 -------------------------------------------------------------------------------- */
 
@@ -95,7 +119,7 @@ Home Page
 Schedule Page
 -------------------------------------------------------------------------------- */
 
-.ScheduleForm {
+.SchedulePage {
   display: flex;
   flex-direction: column;
   justify-content: start;
