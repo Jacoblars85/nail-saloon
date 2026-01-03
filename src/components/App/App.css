@@ -49,35 +49,34 @@ button {
 
 .HomeBigBox {
   display: flex;
-  flex-direction: column;
-  justify-content: start;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
-  /* background-color: #e1e4e4;
   width: 100dvw;
-  height: 100dvh; */
+  height: 100dvh;
 }
 
 .HomeLeftBox {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  /* background-color: #e1e4e4;
-  width: 100dvw;
-  height: 100dvh; */
+  width: 40%;
+  height: 80%;
+  border: 1px solid black;
 }
 
 .HomeRightBox {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  /* background-color: #e1e4e4;
-  width: 100dvw;
-  height: 100dvh; */
+  width: 40%;
+  height: 80%;
+  border: 1px solid black;
 }
 
 .AboutPage {
