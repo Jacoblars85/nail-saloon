@@ -3,8 +3,6 @@ import React from "react";
 function About() {
   return (
     <div className="aboutPage">
-      <h2>This is the Nail Saloon</h2>
-
       <p>
         Nail Saloon is where self-care meets indulgence. We've created a space
         where you can unwind, sip your favorite wine or cocktail, and enjoy
