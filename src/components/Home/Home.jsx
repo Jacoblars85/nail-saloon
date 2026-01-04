@@ -9,13 +9,13 @@ function Home() {
       <h2>This is the nail saloon</h2>
 
       <div className="HomeBigBox">
-        <div className="HomeLeftBox">
+        <div className="HomeSmallBox">
           <h3></h3>
           <img src="" alt="" />
           <p></p>
         </div>
 
-        <div className="HomeRightBox">
+        <div className="HomeSmallBox">
           <h3></h3>
           <img src="" alt="" />
           <p></p>
