@@ -41,7 +41,11 @@ Form Treatment
 -------------------------------------------------------------------------------- */
 
 .formPanel {
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   width: 600px;
   height: 325px;
   max-width: 100%;
@@ -51,7 +55,6 @@ Form Treatment
   background-color: #efefef;
   border: 2px solid black;
   border-radius: 3px;
-  text-align: center;
   z-index: 1;
 }
 
