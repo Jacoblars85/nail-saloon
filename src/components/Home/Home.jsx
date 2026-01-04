@@ -10,13 +10,13 @@ function Home() {
 
       <div className="HomeBigBox">
         <div className="HomeSmallBox">
-          <h3></h3>
+          <h3>We have Spas!</h3>
           <img src="" alt="" />
           <p></p>
         </div>
 
         <div className="HomeSmallBox">
-          <h3></h3>
+          <h3>We Have Wine!</h3>
           <img src="" alt="" />
           <p></p>
         </div>
