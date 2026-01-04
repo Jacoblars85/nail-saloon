@@ -10,11 +10,15 @@ function Home() {
 
       <div className="HomeBigBox">
         <div className="HomeLeftBox">
+          <h3></h3>
           <img src="" alt="" />
+          <p></p>
         </div>
 
         <div className="HomeRightBox">
+          <h3></h3>
           <img src="" alt="" />
+          <p></p>
         </div>
       </div>
       <Link to="/schedule">
