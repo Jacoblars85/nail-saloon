@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ScheduleForm from "../ScheduleForm/ScheduleForm.jsx";
 
-
 function SchedulePage() {
   const dispatch = useDispatch();
 
