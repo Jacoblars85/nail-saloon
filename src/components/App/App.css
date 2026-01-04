@@ -46,16 +46,17 @@ Form Treatment
   justify-content: center;
   align-items: center;
   text-align: center;
+  row-gap: 10px;
   width: 600px;
   height: 325px;
-  max-width: 100%;
+  max-width: 80%;
+  max-height: 75%;
   padding: 25px;
   margin: 0 auto 20px;
   margin-top: 40px;
   background-color: #efefef;
   border: 2px solid black;
   border-radius: 3px;
-  z-index: 1;
 }
 
 /* input {
