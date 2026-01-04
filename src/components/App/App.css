@@ -97,18 +97,7 @@ Home Page
   height: 100dvh;
 }
 
-.HomeLeftBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 40%;
-  height: 80%;
-  border: 1px solid black;
-}
-
-.HomeRightBox {
+.HomeSmallBox {
   display: flex;
   flex-direction: column;
   justify-content: center;
