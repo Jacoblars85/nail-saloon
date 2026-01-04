@@ -19,24 +19,24 @@ function ScheduleForm() {
   };
 
   return (
-      <form className="formPanel" onSubmit={addAppointment}>
-        <input
-          value={nameInput}
-          onChange={(e) => setNameInput(e.target.value)}
-          placeholder="Name"
-        />
-        <input
-          value={numberInput}
-          onChange={(e) => setNumberInput(e.target.value)}
-          placeholder="Phone Number"
-        />
-        <input
-          value={numberInput}
-          onChange={(e) => setNumberInput(e.target.value)}
-          placeholder="Calender"
-        />
-        <button>Create Appointment</button>
-      </form>
+    <form className="formPanel" onSubmit={addAppointment}>
+      <input
+        value={nameInput}
+        onChange={(e) => setNameInput(e.target.value)}
+        placeholder="Name"
+      />
+      <input
+        value={numberInput}
+        onChange={(e) => setNumberInput(e.target.value)}
+        placeholder="Phone Number"
+      />
+      <input
+        value={numberInput}
+        onChange={(e) => setNumberInput(e.target.value)}
+        placeholder="Calender"
+      />
+      <button>Create Appointment</button>
+    </form>
   );
 }
 
