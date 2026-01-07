@@ -144,6 +144,7 @@ About Page
 }
 
 .AboutPage p {
-  padding: 15px;
+  padding-right: 50px;
+  padding-left: 50px;
   font-size: larger;
 }
