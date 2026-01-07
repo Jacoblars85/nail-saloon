@@ -21,8 +21,8 @@ function Home() {
           <p></p>
         </div>
       </div>
-      <Link to="/schedule">
-        <button>Schedule Now</button>
+      <Link to="/form">
+        <button>Schedule Now!</button>
       </Link>
     </div>
   );
