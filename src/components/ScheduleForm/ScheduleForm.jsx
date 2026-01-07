@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import React, { useState } from "react";
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
@@ -28,12 +29,14 @@ function ScheduleForm() {
 
   return (
     <form className="formPanel" onSubmit={addAppointment}>
-      <input
+      <TextField
+      variant="outlined"
         value={nameInput}
         onChange={(e) => setNameInput(e.target.value)}
         placeholder="Name"
       />
-      <input
+      <TextField
+      variant="outlined"
         value={numberInput}
         onChange={(e) => setNumberInput(e.target.value)}
         placeholder="Phone Number"
