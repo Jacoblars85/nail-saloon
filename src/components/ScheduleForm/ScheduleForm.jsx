@@ -33,29 +33,30 @@ function ScheduleForm() {
 
   return (
     <div>
-        <h2>Schedule an Appointment Here!</h2>
-    <form className="formPanel" onSubmit={addAppointment}>
-      <TextField
-        variant="outlined"
-        value={nameInput}
-        onChange={(e) => setNameInput(e.target.value)}
-        placeholder="Name"
-      />
-      <TextField
-        variant="outlined"
-        value={numberInput}
-        onChange={(e) => setNumberInput(e.target.value)}
-        placeholder="Phone Number"
-      />
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <DatePicker
-          value={dateInput}
-          onChange={(dateInput) => setDateInput(dateInput)}
-        />
-      </LocalizationProvider>
+      <h2>Schedule an Appointment Here!</h2>
 
-      <Button variant="outlined">Create Appointment</Button>
-    </form>
+      <form className="formPanel" onSubmit={addAppointment}>
+        <TextField
+          variant="outlined"
+          value={nameInput}
+          onChange={(e) => setNameInput(e.target.value)}
+          placeholder="Name"
+        />
+        <TextField
+          variant="outlined"
+          value={numberInput}
+          onChange={(e) => setNumberInput(e.target.value)}
+          placeholder="Phone Number"
+        />
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <DatePicker
+            value={dateInput}
+            onChange={(dateInput) => setDateInput(dateInput)}
+          />
+        </LocalizationProvider>
+
+        <Button variant="outlined">Create Appointment</Button>
+      </form>
     </div>
   );
 }
