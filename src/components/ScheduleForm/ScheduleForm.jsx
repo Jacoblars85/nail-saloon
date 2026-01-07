@@ -55,7 +55,7 @@ function ScheduleForm() {
           />
         </LocalizationProvider>
 
-        <Button variant="outlined">Create Appointment</Button>
+        <Button color="black" variant="outlined">Create Appointment</Button>
       </form>
     </div>
   );
