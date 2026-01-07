@@ -32,6 +32,8 @@ function ScheduleForm() {
   };
 
   return (
+    <div>
+        <h2>Schedule an Appointment Here!</h2>
     <form className="formPanel" onSubmit={addAppointment}>
       <TextField
         variant="outlined"
@@ -54,6 +56,7 @@ function ScheduleForm() {
 
       <Button variant="outlined">Create Appointment</Button>
     </form>
+    </div>
   );
 }
 
