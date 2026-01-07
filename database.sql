@@ -1,4 +1,4 @@
-CREATE DATABASE "garden";
+CREATE DATABASE "nail_saloon";
 
 CREATE TABLE "plants" (
     "id" SERIAL PRIMARY KEY,
