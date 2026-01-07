@@ -11,9 +11,9 @@ function SchedulePage() {
   return (
     <div className="SchedulePage">
       <h2>Schedule an Appointment Here!</h2>
-<Link to="/form">
-      <button>Schedule Now!</button>
-</Link>
+      <Link to="/form">
+        <button>Schedule Now!</button>
+      </Link>
       {/* <ScheduleForm /> */}
     </div>
   );
