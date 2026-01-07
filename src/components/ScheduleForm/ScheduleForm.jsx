@@ -9,6 +9,11 @@ function ScheduleForm() {
 
   const [nameInput, setNameInput] = useState("");
   const [numberInput, setNumberInput] = useState("");
+  const [dateInput, setDateInput] = useState();
+
+  console.log('dateInput', dateInput);
+  
+
 
   const addAppointment = (e) => {
     e.preventDefault();
@@ -34,9 +39,9 @@ function ScheduleForm() {
         placeholder="Phone Number"
       />
       <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <DatePicker />
+        <DatePicker value={dateInput} onChange={(e) => setDateInput(e.target.value)} />
       </LocalizationProvider>
-      
+
       <button>Create Appointment</button>
     </form>
   );
