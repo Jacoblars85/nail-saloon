@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ScheduleForm from "../ScheduleForm/ScheduleForm.jsx";
 import SchedulePage from "../SchedulePage/SchedulePage.jsx";
+import Button from "@mui/material/Button";
 
 function Home() {
   return (
@@ -22,7 +23,7 @@ function Home() {
         </div>
       </div>
       <Link to="/form">
-        <button>Schedule Now!</button>
+        <Button color="black" variant="outlined">Schedule Now!</Button>
       </Link>
     </div>
   );
