@@ -18,10 +18,11 @@ function ScheduleForm() {
 
     dispatch({
       type: "CREATE_APPOINTMENT",
-      payload: { nameInput: nameInput, numberInput: numberInput },
+      payload: { nameInput: nameInput, numberInput: numberInput, dateInput: dateInput.$d},
     });
     setNameInput("");
     setNumberInput("");
+    setDateInput(null);
   };
 
   return (
