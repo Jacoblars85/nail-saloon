@@ -42,11 +42,6 @@ function ScheduleForm() {
         onChange={(e) => setNumberInput(e.target.value)}
         placeholder="Phone Number"
       />
-      <input
-        value={numberInput}
-        onChange={(e) => setNumberInput(e.target.value)}
-        placeholder="Calender"
-      />
       <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DatePicker />
     </LocalizationProvider>
