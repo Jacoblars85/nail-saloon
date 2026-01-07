@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import React, { useState } from "react";
+import Button from '@mui/material/Button';
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
@@ -44,7 +45,7 @@ function ScheduleForm() {
         />
       </LocalizationProvider>
 
-      <button>Create Appointment</button>
+      <Button variant="outlined">Create Appointment</Button>
     </form>
   );
 }
