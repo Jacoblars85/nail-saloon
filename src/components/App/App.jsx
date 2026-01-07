@@ -3,6 +3,7 @@ import { HashRouter as Router, Route } from "react-router-dom";
 import Home from "../Home/Home.jsx";
 import About from "../AboutPage/AboutPage.jsx";
 import SchedulePage from "../SchedulePage/SchedulePage.jsx";
+import ScheduleForm from "../ScheduleForm/ScheduleForm.jsx";
 import Nav from "../Nav/Nav.jsx";
 import "./App.css";
 
@@ -22,6 +23,10 @@ function App() {
 
         <Route path="/schedule" exact>
           <SchedulePage />
+        </Route>
+
+        <Route path="/form" exact>
+          <ScheduleForm />
         </Route>
       </Router>
     </div>
