@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
 import React, { useState } from "react";
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 function ScheduleForm() {
   const dispatch = useDispatch();
@@ -34,8 +34,9 @@ function ScheduleForm() {
         placeholder="Phone Number"
       />
       <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DatePicker />
-    </LocalizationProvider>
+        <DatePicker />
+      </LocalizationProvider>
+      
       <button>Create Appointment</button>
     </form>
   );
