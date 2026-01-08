@@ -5,6 +5,9 @@ CREATE TABLE "appointments" (
   "start_time" TIMESTAMP NOT NULL
 );
 
+CREATE UNIQUE INDEX "unique_appointment_time"
+ON "appointments" ("start_time");
+
 INSERT INTO "appointments" 
 ("name", "phone", "start_time")
 VALUES 
