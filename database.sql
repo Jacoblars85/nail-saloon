@@ -1,9 +1,8 @@
-CREATE TABLE "appointments" (
-    "id" SERIAL PRIMARY KEY,
-    "name" VARCHAR (100) NOT NULL,
-    "number" VARCHAR (100),
-    "date" VARCHAR (100),
-    "time_id" INT NOT NULL REFERENCES "time_available" ON DELETE CASCADE,
+CREATE TABLE appointments (
+  "id" SERIAL PRIMARY KEY,
+  "name" VARCHAR(100) NOT NULL,
+  "phone" VARCHAR(20) NOT NULL,
+  "start_time" TIMESTAMP NOT NULL
 );
 
 CREATE TABLE "time_available" (
