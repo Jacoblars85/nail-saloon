@@ -11,11 +11,6 @@ CREATE TABLE "time_available" (
     "taken" BOOLEAN DEFAULT FALSE
 );
 
--- INSERT INTO "appointments"
---   ("name", "number", "date")
---   VALUES 
---   ('', '', '');
-
 INSERT INTO "appointments" 
 ("name", "phone", "start_time")
 VALUES 
