@@ -34,8 +34,27 @@ router.get('/', (req, res) => {
 
 });
 
-router.post('/', (req, res) => {
+router.post("/new/appointment", (req, res) => {
+  // console.log("req.body", req.body);
 
+  const sqlText = `
+          INSERT INTO "appointments" 
+("name", "phone", "start_time")
+VALUES 
+($1, $2, $3);
+            `;
+
+  const sqlValues = [req.body.nameInput, req.body.numberInput, req.body.dateInput];
+
+  pool
+    .query(sqlText, sqlValues)
+    .then((result) => {
+      res.sendStatus(201);
+    })
+    .catch((err) => {
+      console.log("Error in schedule.router /new/appointment POST,", err);
+      res.sendStatus(500);
+    });
 });
 
 router.put('/', (req, res) => {
