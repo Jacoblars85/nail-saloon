@@ -3,7 +3,7 @@ CREATE TABLE "appointments" (
     "name" VARCHAR (100) NOT NULL,
     "number" VARCHAR (100),
     "date" VARCHAR (100),
-    "time_id" INT NOT NULL REFERENCES "times_available" ON DELETE CASCADE,
+    "time_id" INT NOT NULL REFERENCES "time_available" ON DELETE CASCADE,
 );
 
 CREATE TABLE "time_available" (
