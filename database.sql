@@ -1,4 +1,4 @@
-CREATE TABLE appointments (
+CREATE TABLE "appointments" (
   "id" SERIAL PRIMARY KEY,
   "name" VARCHAR(100) NOT NULL,
   "phone" VARCHAR(20) NOT NULL,
@@ -15,6 +15,11 @@ CREATE TABLE "time_available" (
 --   ("name", "number", "date")
 --   VALUES 
 --   ('', '', '');
+
+INSERT INTO "appointments" 
+("name", "phone", "start_time")
+VALUES 
+('Jane Doe', '555-1234', '2026-01-08 10:00');
 
   INSERT INTO "time_available" 
 	("time", "taken")
