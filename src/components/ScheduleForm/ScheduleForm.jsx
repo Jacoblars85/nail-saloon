@@ -26,10 +26,10 @@ function ScheduleForm() {
 
     console.log("appointmentDetails", appointmentDetails);
 
-    dispatch({
-      type: "CREATE_APPOINTMENT",
-      payload: appointmentDetails,
-    });
+    // dispatch({
+    //   type: "CREATE_APPOINTMENT",
+    //   payload: appointmentDetails,
+    // });
     setNameInput("");
     setPhoneInput("");
     setDateInput(null);
@@ -61,7 +61,7 @@ function ScheduleForm() {
           />
         </LocalizationProvider>
 
-        <Button color="black" variant="outlined">
+        <Button type="submit" color="black" variant="outlined">
           Create Appointment
         </Button>
       </form>
