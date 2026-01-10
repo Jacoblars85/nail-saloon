@@ -43,7 +43,7 @@ VALUES
 
   const sqlValues = [
     req.body.nameInput,
-    req.body.numberInput,
+    req.body.phoneInput,
     req.body.dateInput,
   ];
 
