@@ -18,13 +18,18 @@ function ScheduleForm() {
   const addAppointment = (e) => {
     e.preventDefault();
 
-    dispatch({
-      type: "CREATE_APPOINTMENT",
-      payload: {
+    let appointmentDetails = {
         nameInput: nameInput,
         numberInput: numberInput,
         dateInput: dateInput.$d,
-      },
+    }
+
+    console.log('appointmentDetails', appointmentDetails);
+    
+
+    dispatch({
+      type: "CREATE_APPOINTMENT",
+      payload: appointmentDetails
     });
     setNameInput("");
     setNumberInput("");
