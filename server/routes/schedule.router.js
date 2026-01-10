@@ -1,6 +1,5 @@
-const express = require('express');
-const pool = require('../modules/pool');
-
+const express = require("express");
+const pool = require("../modules/pool");
 const router = express.Router();
 
 router.get("/open/appointments", (req, res) => {
@@ -30,9 +29,7 @@ WHERE slot NOT IN (
     });
 });
 
-router.get('/', (req, res) => {
-
-});
+router.get("/", (req, res) => {});
 
 router.post("/new/appointment", (req, res) => {
   // console.log("req.body", req.body);
@@ -44,7 +41,11 @@ VALUES
 ($1, $2, $3);
             `;
 
-  const sqlValues = [req.body.nameInput, req.body.numberInput, req.body.dateInput];
+  const sqlValues = [
+    req.body.nameInput,
+    req.body.numberInput,
+    req.body.dateInput,
+  ];
 
   pool
     .query(sqlText, sqlValues)
@@ -57,12 +58,8 @@ VALUES
     });
 });
 
-router.put('/', (req, res) => {
+router.put("/", (req, res) => {});
 
-});
-
-router.delete('/', (req, res) => {
-
-});
+router.delete("/", (req, res) => {});
 
 module.exports = router;
