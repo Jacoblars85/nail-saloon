@@ -22,8 +22,11 @@ function Home() {
           <p></p>
         </div>
       </div>
+      
       <Link to="/form">
-        <Button color="black" variant="outlined">Schedule Now!</Button>
+        <Button color="black" variant="outlined">
+          Schedule Now!
+        </Button>
       </Link>
     </div>
   );
