@@ -42,12 +42,14 @@ function ScheduleForm() {
           onChange={(e) => setNameInput(e.target.value)}
           placeholder="Name"
         />
+
         <TextField
           variant="outlined"
           value={numberInput}
           onChange={(e) => setNumberInput(e.target.value)}
           placeholder="Phone Number"
         />
+
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DatePicker
             value={dateInput}
@@ -55,7 +57,9 @@ function ScheduleForm() {
           />
         </LocalizationProvider>
 
-        <Button color="black" variant="outlined">Create Appointment</Button>
+        <Button color="black" variant="outlined">
+          Create Appointment
+        </Button>
       </form>
     </div>
   );
