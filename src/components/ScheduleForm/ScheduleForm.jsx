@@ -19,17 +19,16 @@ function ScheduleForm() {
     e.preventDefault();
 
     let appointmentDetails = {
-        nameInput: nameInput,
-        numberInput: numberInput,
-        dateInput: dateInput.$d,
-    }
+      nameInput: nameInput,
+      numberInput: numberInput,
+      dateInput: dateInput.$d,
+    };
 
-    console.log('appointmentDetails', appointmentDetails);
-    
+    console.log("appointmentDetails", appointmentDetails);
 
     dispatch({
       type: "CREATE_APPOINTMENT",
-      payload: appointmentDetails
+      payload: appointmentDetails,
     });
     setNameInput("");
     setNumberInput("");
