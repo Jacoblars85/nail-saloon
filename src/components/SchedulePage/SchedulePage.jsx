@@ -14,7 +14,9 @@ function SchedulePage() {
       <h2>Schedule an Appointment Here!</h2>
       <p>We accept walk ins or you can set up an appointment!</p>
       <Link to="/form">
-        <Button color="black" variant="outlined">Schedule Now!</Button>
+        <Button color="black" variant="outlined">
+          Schedule Now!
+        </Button>
       </Link>
     </div>
   );
