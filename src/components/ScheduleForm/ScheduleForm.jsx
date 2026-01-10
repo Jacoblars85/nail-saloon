@@ -10,7 +10,7 @@ function ScheduleForm() {
   const dispatch = useDispatch();
 
   const [nameInput, setNameInput] = useState("");
-  const [numberInput, setNumberInput] = useState("");
+  const [phoneInput, setPhoneInput] = useState("");
   const [dateInput, setDateInput] = useState(null);
 
   console.log("dateInput", dateInput);
@@ -20,7 +20,7 @@ function ScheduleForm() {
 
     let appointmentDetails = {
       nameInput: nameInput,
-      numberInput: numberInput,
+      phoneInput: phoneInput,
       dateInput: dateInput.$d,
     };
 
@@ -31,7 +31,7 @@ function ScheduleForm() {
       payload: appointmentDetails,
     });
     setNameInput("");
-    setNumberInput("");
+    setPhoneInput("");
     setDateInput(null);
   };
 
@@ -49,8 +49,8 @@ function ScheduleForm() {
 
         <TextField
           variant="outlined"
-          value={numberInput}
-          onChange={(e) => setNumberInput(e.target.value)}
+          value={phoneInput}
+          onChange={(e) => setPhoneInput(e.target.value)}
           placeholder="Phone Number"
         />
 
