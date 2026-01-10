@@ -5,6 +5,7 @@ import About from "../AboutPage/AboutPage.jsx";
 import SchedulePage from "../SchedulePage/SchedulePage.jsx";
 import ScheduleForm from "../ScheduleForm/ScheduleForm.jsx";
 import Nav from "../Nav/Nav.jsx";
+import Admin from "../Admin/Admin.jsx";
 import "./App.css";
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
 
         <Route path="/form" exact>
           <ScheduleForm />
+        </Route>
+
+        <Route path="/admin" exact>
+          <Admin />
         </Route>
       </Router>
     </div>
