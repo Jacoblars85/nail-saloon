@@ -57,7 +57,8 @@ function ScheduleForm() {
 
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DatePicker
-          minDate={dayjs()}
+            minDate={dayjs()}
+            maxDate={dayjs().add(30, "day")}
             value={dateInput}
             onChange={(dateInput) => setDateInput(dateInput)}
           />
