@@ -127,6 +127,17 @@ Schedule Page
   height: 100dvh;
 }
 
+.TimeAvailable {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid gray;
+  height: 100%;
+  width: 80%;
+}
+
 /* --------------------------------------------------------------------------------
 About Page
 -------------------------------------------------------------------------------- */
