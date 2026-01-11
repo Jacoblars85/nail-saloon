@@ -64,7 +64,7 @@ function ScheduleForm() {
           />
         </LocalizationProvider>
 
-        <div id="timeAvailable" className="timeAvailable"></div>
+        <div id="timeAvailable" className="TimeAvailable"></div>
 
         <Button type="submit" color="black" variant="outlined">
           Create Appointment
