@@ -7,7 +7,7 @@
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^7.3.6",
     "@mui/x-date-pickers": "^8.23.0",
-    "axios": "^0.21.1",
+    "axios": "^0.21.4",
     "body-parser": "^1.18.2",
     "dayjs": "^1.11.19",
     "express": "^4.16.3",
