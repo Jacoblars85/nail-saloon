@@ -24,7 +24,7 @@ function ScheduleForm() {
   const getAppointments = () => {
     axios({
       method: "GET",
-      url: "/open/appointments",
+      url: "/api/schedule/open/appointments",
     })
       .then((response) => {
         console.log("got appointments", response.data);
@@ -50,7 +50,7 @@ function ScheduleForm() {
 
     axios({
       method: "POST",
-      url: "/new/appointment",
+      url: "/api/schedule/new/appointment",
       data: appointmentDetails,
     })
       .then((response) => {
