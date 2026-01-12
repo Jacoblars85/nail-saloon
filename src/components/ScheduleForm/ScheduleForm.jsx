@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -13,6 +13,23 @@ function ScheduleForm() {
   const [nameInput, setNameInput] = useState("");
   const [phoneInput, setPhoneInput] = useState("");
   const [dateInput, setDateInput] = useState(null);
+
+      useEffect(() => {
+        console.log('in useEffect')
+        getAppointments();
+    }, [dateInput]);
+
+    const getAppointments = () => {
+        axios({
+            method: 'GET',
+            url: '/open/appointments'
+        }).then((response) => {
+            console.log('got appointments', response.data );
+            
+        }).catch((err)=>{
+            console.log(err);
+        });
+    };
 
   console.log("dateInput", dateInput);
 
