@@ -6,6 +6,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import dayjs from "dayjs";
+import axios from 'axios';
 
 function ScheduleForm() {
   const dispatch = useDispatch();
@@ -56,7 +57,7 @@ function ScheduleForm() {
         }).catch((err) => {
             console.log(err);
         });
-        
+
     setNameInput("");
     setPhoneInput("");
     setDateInput(null);
@@ -91,11 +92,11 @@ function ScheduleForm() {
         </LocalizationProvider>
 
         <div id="timeAvailable" className="TimeAvailable">
-          {openAppointments.map((appointment) => (
+          {/* {openAppointments.map((appointment) => (
             <div>
               <p>{appointment}</p>
             </div>
-          ))}
+          ))} */}
         </div>
 
         <Button type="submit" color="black" variant="outlined">
