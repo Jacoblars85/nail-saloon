@@ -17,7 +17,6 @@ function ScheduleForm() {
   const [openAppointments, setOpenAppointments] = useState([]);
 
   useEffect(() => {
-    console.log("in useEffect");
     getAppointments(dateInput);
   }, [dateInput]);
 
@@ -27,7 +26,6 @@ function ScheduleForm() {
       url: `/api/schedule/open/appointments/${date}`,
     })
       .then((response) => {
-        console.log("got appointments", response.data);
         setOpenAppointments(response.data);
       })
       .catch((err) => {
@@ -35,7 +33,7 @@ function ScheduleForm() {
       });
   };
 
-  console.log("dateInput", dateInput);
+//   console.log("dateInput", dateInput);
 
   const addAppointment = (e) => {
     e.preventDefault();
@@ -96,7 +94,7 @@ function ScheduleForm() {
         <div id="timeAvailable" className="TimeAvailable">
           {openAppointments.map((appointment) => (
             <div>
-              <p>{appointment.slot}</p>
+              <p>{dayjs(appointment.slot).format('h:mm A')}</p>
             </div>
           ))}
         </div>
