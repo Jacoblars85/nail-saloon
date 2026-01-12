@@ -13,18 +13,18 @@ function ScheduleForm() {
 
   const [nameInput, setNameInput] = useState("");
   const [phoneInput, setPhoneInput] = useState("");
-  const [dateInput, setDateInput] = useState(null);
+  const [dateInput, setDateInput] = useState(dayjs());
   const [openAppointments, setOpenAppointments] = useState([]);
 
   useEffect(() => {
     console.log("in useEffect");
-    getAppointments();
+    getAppointments(dateInput);
   }, [dateInput]);
 
-  const getAppointments = () => {
+  const getAppointments = (date) => {
     axios({
       method: "GET",
-      url: "/api/schedule/open/appointments",
+      url: `/api/schedule/open/appointments/${date}`,
     })
       .then((response) => {
         console.log("got appointments", response.data);
