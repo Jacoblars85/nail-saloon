@@ -6,7 +6,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import dayjs from "dayjs";
-import axios from 'axios';
+import axios from "axios";
 
 function ScheduleForm() {
   const dispatch = useDispatch();
@@ -48,15 +48,17 @@ function ScheduleForm() {
 
     console.log("appointmentDetails", appointmentDetails);
 
-      axios({
-            method: 'POST',
-            url: '/new/appointment',
-            data: appointmentDetails
-        }).then((response) => {
-            console.log(response);
-        }).catch((err) => {
-            console.log(err);
-        });
+    axios({
+      method: "POST",
+      url: "/new/appointment",
+      data: appointmentDetails,
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
     setNameInput("");
     setPhoneInput("");
