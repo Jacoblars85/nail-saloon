@@ -13,6 +13,7 @@ function ScheduleForm() {
   const [nameInput, setNameInput] = useState("");
   const [phoneInput, setPhoneInput] = useState("");
   const [dateInput, setDateInput] = useState(null);
+  const [openAppointments, setOpenAppointments] = useState([]);
 
   useEffect(() => {
     console.log("in useEffect");
@@ -26,6 +27,7 @@ function ScheduleForm() {
     })
       .then((response) => {
         console.log("got appointments", response.data);
+        setOpenAppointments(response.data)
       })
       .catch((err) => {
         console.log(err);
@@ -82,7 +84,13 @@ function ScheduleForm() {
           />
         </LocalizationProvider>
 
-        <div id="timeAvailable" className="TimeAvailable"></div>
+        <div id="timeAvailable" className="TimeAvailable">
+            {openAppointments.map(appointment => (
+                        <div>
+                            <p>{appointment}</p>
+                        </div>
+                    ))}
+        </div>
 
         <Button type="submit" color="black" variant="outlined">
           Create Appointment
