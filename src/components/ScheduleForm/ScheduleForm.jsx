@@ -94,11 +94,11 @@ function ScheduleForm() {
         </LocalizationProvider>
 
         <div id="timeAvailable" className="TimeAvailable">
-          {/* {openAppointments.map((appointment) => (
+          {openAppointments.map((appointment) => (
             <div>
-              <p>{appointment}</p>
+              <p>{appointment.slot}</p>
             </div>
-          ))} */}
+          ))}
         </div>
 
         <Button type="submit" color="black" variant="outlined">
