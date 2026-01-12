@@ -27,7 +27,7 @@ function ScheduleForm() {
     })
       .then((response) => {
         console.log("got appointments", response.data);
-        setOpenAppointments(response.data)
+        setOpenAppointments(response.data);
       })
       .catch((err) => {
         console.log(err);
@@ -85,11 +85,11 @@ function ScheduleForm() {
         </LocalizationProvider>
 
         <div id="timeAvailable" className="TimeAvailable">
-            {openAppointments.map(appointment => (
-                        <div>
-                            <p>{appointment}</p>
-                        </div>
-                    ))}
+          {openAppointments.map((appointment) => (
+            <div>
+              <p>{appointment}</p>
+            </div>
+          ))}
         </div>
 
         <Button type="submit" color="black" variant="outlined">
