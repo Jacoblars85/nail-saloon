@@ -14,22 +14,23 @@ function ScheduleForm() {
   const [phoneInput, setPhoneInput] = useState("");
   const [dateInput, setDateInput] = useState(null);
 
-      useEffect(() => {
-        console.log('in useEffect')
-        getAppointments();
-    }, [dateInput]);
+  useEffect(() => {
+    console.log("in useEffect");
+    getAppointments();
+  }, [dateInput]);
 
-    const getAppointments = () => {
-        axios({
-            method: 'GET',
-            url: '/open/appointments'
-        }).then((response) => {
-            console.log('got appointments', response.data );
-            
-        }).catch((err)=>{
-            console.log(err);
-        });
-    };
+  const getAppointments = () => {
+    axios({
+      method: "GET",
+      url: "/open/appointments",
+    })
+      .then((response) => {
+        console.log("got appointments", response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   console.log("dateInput", dateInput);
 
