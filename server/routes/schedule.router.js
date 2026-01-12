@@ -2,24 +2,25 @@ const express = require("express");
 const pool = require("../modules/pool");
 const router = express.Router();
 
-router.get("/open/appointments", (req, res) => {
+router.get("/open/appointments/:id", (req, res) => {
   // console.log('im in open appointments route');
 
   const query = `
 SELECT *
 FROM generate_series(
-  '2026-01-08 10:00'::timestamp,
-  '2026-01-08 18:00'::timestamp,
+  $1::date + time '10:00',
+  $1::date + time '18:00',
   interval '30 minutes'
 ) AS slot
 WHERE slot NOT IN (
   SELECT "start_time" FROM "appointments"
 );
-
     `;
 
+     const sqlValues = [req.params.id];
+
   pool
-    .query(query)
+    .query(query, sqlValues)
     .then((result) => {
       res.send(result.rows);
     })
