@@ -47,10 +47,16 @@ function ScheduleForm() {
 
     console.log("appointmentDetails", appointmentDetails);
 
-    // dispatch({
-    //   type: "CREATE_APPOINTMENT",
-    //   payload: appointmentDetails,
-    // });
+      axios({
+            method: 'POST',
+            url: '/new/appointment',
+            data: appointmentDetails
+        }).then((response) => {
+            console.log(response);
+        }).catch((err) => {
+            console.log(err);
+        });
+        
     setNameInput("");
     setPhoneInput("");
     setDateInput(null);
