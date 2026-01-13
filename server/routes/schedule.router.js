@@ -17,7 +17,7 @@ WHERE slot NOT IN (
 );
     `;
 
-     const sqlValues = [req.params.id];
+  const sqlValues = [req.params.id];
 
   pool
     .query(query, sqlValues)
