@@ -66,9 +66,8 @@ function ScheduleForm() {
 
   const clicksTime = (time) => {
     console.log("clicking time", time);
-    setTimeInput(time)
-    console.log('timeInput', timeInput);
-    
+    setTimeInput(time);
+    console.log("timeInput", timeInput);
   };
 
   return (
