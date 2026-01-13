@@ -33,7 +33,7 @@ function ScheduleForm() {
       });
   };
 
-//   console.log("dateInput", dateInput);
+  //   console.log("dateInput", dateInput);
 
   const addAppointment = (e) => {
     e.preventDefault();
@@ -94,7 +94,7 @@ function ScheduleForm() {
         <div id="timeAvailable" className="TimeAvailable">
           {openAppointments.map((appointment) => (
             <div>
-              <p>{dayjs(appointment.slot).format('h:mm A')}</p>
+              <p>{dayjs(appointment.slot).format("h:mm A")}</p>
             </div>
           ))}
         </div>
