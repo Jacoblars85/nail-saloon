@@ -93,8 +93,8 @@ function ScheduleForm() {
 
         <div id="timeAvailable" className="TimeAvailable">
           {openAppointments.map((appointment) => (
-            <div className="TimeBox">
-              <p>{dayjs(appointment.slot).format("h:mm A")}</p>
+            <div key={appointment.slot} className="TimeBox">
+              <button>{dayjs(appointment.slot).format("h:mm A")}</button>
             </div>
           ))}
         </div>
