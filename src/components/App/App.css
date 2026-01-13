@@ -130,12 +130,19 @@ Schedule Page
 .TimeAvailable {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
   border: 1px solid gray;
   height: 100%;
   width: 80%;
+}
+
+.TimeBox {
+  border: 1px solid black;
+  height: 50%;
+  /* width: 80%; */
 }
 
 /* --------------------------------------------------------------------------------
