@@ -14,6 +14,7 @@ function ScheduleForm() {
   const [nameInput, setNameInput] = useState("");
   const [phoneInput, setPhoneInput] = useState("");
   const [dateInput, setDateInput] = useState(dayjs());
+  const [timeInput, setTimeInput] = useState(null);
   const [openAppointments, setOpenAppointments] = useState([]);
 
   useEffect(() => {
@@ -65,6 +66,9 @@ function ScheduleForm() {
 
   const clicksTime = (time) => {
     console.log("clicking time", time);
+    setTimeInput(time)
+    console.log('timeInput', timeInput);
+    
   };
 
   return (
