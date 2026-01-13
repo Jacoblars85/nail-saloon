@@ -63,9 +63,8 @@ function ScheduleForm() {
     setDateInput(null);
   };
 
-    const clicksTime = (time) => {
-    console.log('clicking time', time);
-    
+  const clicksTime = (time) => {
+    console.log("clicking time", time);
   };
 
   return (
@@ -99,7 +98,9 @@ function ScheduleForm() {
         <div id="timeAvailable" className="TimeAvailable">
           {openAppointments.map((appointment) => (
             <div key={appointment.slot} className="TimeBox">
-              <button onClick={clicksTime(appointment.slot)}>{dayjs(appointment.slot).format("h:mm A")}</button>
+              <button onClick={clicksTime(appointment.slot)}>
+                {dayjs(appointment.slot).format("h:mm A")}
+              </button>
             </div>
           ))}
         </div>
