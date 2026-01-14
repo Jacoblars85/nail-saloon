@@ -43,6 +43,7 @@ function ScheduleForm() {
       nameInput: nameInput,
       phoneInput: phoneInput,
       dateInput: dateInput.$d,
+      timeInput: timeInput,
     };
 
     console.log("appointmentDetails", appointmentDetails);
@@ -61,7 +62,8 @@ function ScheduleForm() {
 
     setNameInput("");
     setPhoneInput("");
-    setDateInput(null);
+    setDateInput(dayjs());
+    setTimeInput(null);
   };
 
   const clicksTime = (e, time) => {
