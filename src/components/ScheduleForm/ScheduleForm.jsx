@@ -36,8 +36,6 @@ function ScheduleForm() {
       });
   };
 
-  //   console.log("dateInput", dateInput);
-
   const addAppointment = (e) => {
     e.preventDefault();
 
@@ -67,9 +65,7 @@ function ScheduleForm() {
   };
 
   const clicksTime = (e, time) => {
-    console.log("clicking time", time);
     setTimeInput(time);
-    console.log("timeInput", timeInput);
   };
 
   return (
