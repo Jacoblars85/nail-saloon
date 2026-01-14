@@ -23,8 +23,10 @@ function Home() {
         </div>
       </div>
 
-      <div className="Prices"><h2>Prices</h2></div>
-      
+      <div className="Prices">
+        <h2>Prices</h2>
+      </div>
+
       <Link to="/form">
         <Button color="black" variant="outlined">
           Schedule Now!
