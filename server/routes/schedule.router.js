@@ -45,7 +45,7 @@ VALUES
   const sqlValues = [
     req.body.nameInput,
     req.body.phoneInput,
-    req.body.dateInput,
+    req.body.timeInput,
   ];
 
   pool
