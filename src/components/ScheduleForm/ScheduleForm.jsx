@@ -105,15 +105,11 @@ function ScheduleForm() {
       onChange={clicksTime}
       className="TimeAvailable"
     >
-        {/* <div id="timeAvailable" className="TimeAvailable"> */}
           {openAppointments.map((appointment) => (
-            // <div key={appointment.slot} className="TimeBox">
               <ToggleButton key={appointment.slot} className="TimeBox" value={appointment.slot}>
                 {dayjs(appointment.slot).format("h:mm A")}
               </ToggleButton>
-            // {/* </div> */}
           ))}
-        {/* </div> */}
 </ToggleButtonGroup>
 
         <Button type="submit" color="black" variant="outlined">
