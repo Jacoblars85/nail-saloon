@@ -99,11 +99,12 @@ function ScheduleForm() {
             onChange={(dateInput) => setDateInput(dateInput)}
           />
         </LocalizationProvider>
+
         <ToggleButtonGroup
+          className="TimeAvailable"
           value={timeInput}
           exclusive
           onChange={clicksTime}
-          className="TimeAvailable"
         >
           {openAppointments.map((appointment) => (
             <ToggleButton
