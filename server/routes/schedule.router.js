@@ -30,7 +30,24 @@ WHERE slot NOT IN (
     });
 });
 
-router.get("/", (req, res) => {});
+router.get("/booked/appointments", (req, res) => {
+  // console.log('im in open appointments route');
+
+  const query = `
+SELECT *
+FROM "appointments";
+    `;
+
+  pool
+    .query(query)
+    .then((result) => {
+      res.send(result.rows);
+    })
+    .catch((err) => {
+      console.log("ERROR: Get all booked appointments", err);
+      res.sendStatus(500);
+    });
+});
 
 router.post("/new/appointment", (req, res) => {
   // console.log("req.body", req.body);
