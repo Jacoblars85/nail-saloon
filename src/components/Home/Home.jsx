@@ -22,6 +22,8 @@ function Home() {
           <p></p>
         </div>
       </div>
+
+      <div className="Prices"><h2>Prices</h2></div>
       
       <Link to="/form">
         <Button color="black" variant="outlined">
