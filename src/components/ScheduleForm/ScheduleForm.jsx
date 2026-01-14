@@ -7,8 +7,8 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import dayjs from "dayjs";
 import axios from "axios";
-import ToggleButton from '@mui/material/ToggleButton';
-import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
 function ScheduleForm() {
   const dispatch = useDispatch();
@@ -99,18 +99,22 @@ function ScheduleForm() {
             onChange={(dateInput) => setDateInput(dateInput)}
           />
         </LocalizationProvider>
- <ToggleButtonGroup
-      value={timeInput}
-      exclusive
-      onChange={clicksTime}
-      className="TimeAvailable"
-    >
+        <ToggleButtonGroup
+          value={timeInput}
+          exclusive
+          onChange={clicksTime}
+          className="TimeAvailable"
+        >
           {openAppointments.map((appointment) => (
-              <ToggleButton key={appointment.slot} className="TimeBox" value={appointment.slot}>
-                {dayjs(appointment.slot).format("h:mm A")}
-              </ToggleButton>
+            <ToggleButton
+              key={appointment.slot}
+              className="TimeBox"
+              value={appointment.slot}
+            >
+              {dayjs(appointment.slot).format("h:mm A")}
+            </ToggleButton>
           ))}
-</ToggleButtonGroup>
+        </ToggleButtonGroup>
 
         <Button type="submit" color="black" variant="outlined">
           Create Appointment
