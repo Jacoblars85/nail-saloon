@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 function Admin() {
-    const [appointments, setAppointments] = useState([]);
-  
+  const [appointments, setAppointments] = useState([]);
 
-    useEffect(() => {
+  useEffect(() => {
     getBookedAppointments();
   }, []);
 
