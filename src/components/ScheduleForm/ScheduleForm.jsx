@@ -103,11 +103,12 @@ function ScheduleForm() {
       value={timeInput}
       exclusive
       onChange={clicksTime}
+      className="TimeAvailable"
     >
         {/* <div id="timeAvailable" className="TimeAvailable"> */}
           {openAppointments.map((appointment) => (
             // <div key={appointment.slot} className="TimeBox">
-              <ToggleButton value={appointment.slot}>
+              <ToggleButton key={appointment.slot} className="TimeBox" value={appointment.slot}>
                 {dayjs(appointment.slot).format("h:mm A")}
               </ToggleButton>
             // {/* </div> */}
