@@ -43,7 +43,7 @@ function ScheduleForm() {
       nameInput: nameInput,
       phoneInput: phoneInput,
       dateInput: dateInput.$d,
-      timeInput: timeInput,
+      timeInput: dayjs(timeInput).format("YYYY-MM-DD HH:mm"),
     };
 
     console.log("appointmentDetails", appointmentDetails);
