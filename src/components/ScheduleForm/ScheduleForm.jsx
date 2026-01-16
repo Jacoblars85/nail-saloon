@@ -39,6 +39,10 @@ function ScheduleForm() {
   const addAppointment = (e) => {
     e.preventDefault();
 
+    if (nameInput === "" || phoneInput === "" || timeInput === null) {
+      return
+    }
+
     let appointmentDetails = {
       nameInput: nameInput,
       phoneInput: phoneInput,
@@ -80,6 +84,7 @@ function ScheduleForm() {
           value={nameInput}
           onChange={(e) => setNameInput(e.target.value)}
           placeholder="Name"
+          size="small"
         />
 
         <TextField
@@ -87,6 +92,7 @@ function ScheduleForm() {
           value={phoneInput}
           onChange={(e) => setPhoneInput(e.target.value)}
           placeholder="Phone Number"
+          size="small"
         />
 
         <LocalizationProvider dateAdapter={AdapterDayjs}>
