@@ -24,6 +24,17 @@ function Admin() {
   return (
     <div className="Admin">
       <h2>Admin</h2>
+
+      {appointments.map((appointment) => (
+            <div
+              key={appointment.slot}
+              className="AdminBox"
+              value={appointment.slot}
+            >
+              <p>
+              {dayjs(appointment.slot).format("h:mm A")}</p>
+            </div>
+          ))}
     </div>
   );
 }
