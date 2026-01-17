@@ -83,9 +83,12 @@ router.put("/edit/appointment", (req, res) => {
           WHERE "id" = $4;
           `;
 
-  const sqlValues = [req.body.nameInput,
+  const sqlValues = [
+    req.body.nameInput,
     req.body.phoneInput,
-    req.body.timeInput, req.body.appointmentID];
+    req.body.timeInput,
+    req.body.appointmentID,
+  ];
 
   pool
     .query(sqlText, sqlValues)
