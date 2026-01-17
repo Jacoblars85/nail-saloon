@@ -31,7 +31,9 @@ function Admin() {
           className="AdminBox"
           value={appointment.slot}
         >
-          <p>{dayjs(appointment.slot).format("h:mm A")}</p>
+          <p>{appointment.name}</p>
+          <p>{appointment.phone}</p>
+          <p>{dayjs(appointment.start_time).format("h:mm A")}</p>
         </div>
       ))}
     </div>
