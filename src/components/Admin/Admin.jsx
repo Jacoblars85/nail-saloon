@@ -27,12 +27,13 @@ function Admin() {
 
       {appointments.map((appointment) => (
         <div
-          key={appointment.slot}
+          key={appointment.id}
           className="AdminBox"
-          value={appointment.slot}
         >
           <p>{appointment.name}</p>
           <p>{appointment.phone}</p>
+          <p>{dayjs(appointment.start_time).format("YYYY-MM-DD HH:mm")}</p>
+          <p>{dayjs(appointment.start_time).format("YYYY-MM-DD")}</p>
           <p>{dayjs(appointment.start_time).format("h:mm A")}</p>
         </div>
       ))}
