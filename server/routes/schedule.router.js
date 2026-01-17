@@ -78,6 +78,23 @@ VALUES
 
 router.put("/", (req, res) => {});
 
-router.delete("/", (req, res) => {});
+router.delete("/appointment", (req, res) => {
+  const sqlText = `
+    DELETE FROM "appointments"
+      WHERE "id" = $1;
+      `;
+
+  const sqlValues = [req.body.appointmentID];
+
+  pool
+    .query(sqlText, sqlValues)
+    .then((result) => {
+      res.sendStatus(201);
+    })
+    .catch((err) => {
+      console.log("Error in schedule.router DELETE, deleting appointment", err);
+      res.sendStatus(500);
+    });
+});
 
 module.exports = router;
