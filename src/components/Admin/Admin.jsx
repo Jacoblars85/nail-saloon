@@ -26,10 +26,7 @@ function Admin() {
       <h2>Admin</h2>
 
       {appointments.map((appointment) => (
-        <div
-          key={appointment.id}
-          className="AdminBox"
-        >
+        <div key={appointment.id} className="AdminBox">
           <p>{appointment.name}</p>
           <p>{appointment.phone}</p>
           <p>{dayjs(appointment.start_time).format("YYYY-MM-DD HH:mm")}</p>
