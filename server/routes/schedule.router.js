@@ -76,7 +76,27 @@ VALUES
     });
 });
 
-router.put("/", (req, res) => {});
+router.put("/edit/appointment", (req, res) => {
+  const sqlText = `
+        UPDATE "appointments"
+          SET "name" = $1, "phone" = $2, "start_time" = $3
+          WHERE "id" = $4;
+          `;
+
+  const sqlValues = [req.body.nameInput,
+    req.body.phoneInput,
+    req.body.timeInput, req.body.appointmentID];
+
+  pool
+    .query(sqlText, sqlValues)
+    .then((result) => {
+      res.sendStatus(201);
+    })
+    .catch((err) => {
+      console.log("Error in schedule.router /edit/appointment PUT,", err);
+      res.sendStatus(500);
+    });
+});
 
 router.delete("/appointment", (req, res) => {
   const sqlText = `
