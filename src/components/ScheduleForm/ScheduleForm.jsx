@@ -40,34 +40,35 @@ function ScheduleForm() {
     e.preventDefault();
 
     if (nameInput === "" || phoneInput === "" || timeInput === null) {
-      return
+      return;
     }
+    {
+      let appointmentDetails = {
+        nameInput: nameInput,
+        phoneInput: phoneInput,
+        dateInput: dateInput.$d,
+        timeInput: dayjs(timeInput).format("YYYY-MM-DD HH:mm"),
+      };
 
-    let appointmentDetails = {
-      nameInput: nameInput,
-      phoneInput: phoneInput,
-      dateInput: dateInput.$d,
-      timeInput: dayjs(timeInput).format("YYYY-MM-DD HH:mm"),
-    };
+      console.log("appointmentDetails", appointmentDetails);
 
-    console.log("appointmentDetails", appointmentDetails);
-
-    axios({
-      method: "POST",
-      url: "/api/schedule/new/appointment",
-      data: appointmentDetails,
-    })
-      .then((response) => {
-        console.log(response);
+      axios({
+        method: "POST",
+        url: "/api/schedule/new/appointment",
+        data: appointmentDetails,
       })
-      .catch((err) => {
-        console.log(err);
-      });
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
 
-    setNameInput("");
-    setPhoneInput("");
-    setDateInput(dayjs());
-    setTimeInput(null);
+      setNameInput("");
+      setPhoneInput("");
+      setDateInput(dayjs());
+      setTimeInput(null);
+    }
   };
 
   const clicksTime = (e, time) => {
