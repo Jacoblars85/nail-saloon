@@ -36,7 +36,11 @@ function Admin() {
     </tr>
   </thead>
   <tbody>
-    <tr>
+   
+
+
+      {appointments.map((appointment) => (
+ <tr key={appointment.id} className="AdminBox">
       <td>{appointment.name}</td>
       <td>{appointment.phone}</td>
       <td><p>{dayjs(appointment.start_time).format("YYYY-MM-DD HH:mm")}</p>
@@ -45,18 +49,10 @@ function Admin() {
       <td><button>e</button></td>
       <td><button>d</button></td>
     </tr>
-  </tbody>
-</table>
-
-      {appointments.map((appointment) => (
-        <div key={appointment.id} className="AdminBox">
-          <p>{appointment.name}</p>
-          <p>{appointment.phone}</p>
-          <p>{dayjs(appointment.start_time).format("YYYY-MM-DD HH:mm")}</p>
-          <p>{dayjs(appointment.start_time).format("YYYY-MM-DD")}</p>
-          <p>{dayjs(appointment.start_time).format("h:mm A")}</p>
-        </div>
       ))}
+
+        </tbody>
+</table>
     </div>
   );
 }
