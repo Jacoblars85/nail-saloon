@@ -167,3 +167,30 @@ About Page
   padding-left: 50px;
   font-size: larger;
 }
+
+/* --------------------------------------------------------------------------------
+Admin Page
+-------------------------------------------------------------------------------- */
+
+.Admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  background-color: #e1e4e4;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+.AdminTable {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid gray;
+  height: 125px;
+  width: 80%;
+}
