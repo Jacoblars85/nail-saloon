@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import dayjs from "dayjs";
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function Admin() {
   const [appointments, setAppointments] = useState([]);
@@ -49,7 +50,7 @@ function Admin() {
                 <button>e</button>
               </td>
               <td>
-                <button>d</button>
+                <button><DeleteIcon /></button>
               </td>
             </tr>
           ))}
