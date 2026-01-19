@@ -183,17 +183,6 @@ Admin Page
   height: 100dvh;
 }
 
-/* .AdminTable {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: 1px solid gray;
-  height: 125px;
-  width: 80%;
-} */
-
 table {
     width: 85%;
     text-align: left;

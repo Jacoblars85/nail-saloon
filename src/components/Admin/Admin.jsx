@@ -27,7 +27,7 @@ function Admin() {
     <div className="Admin">
       <h2>Admin</h2>
 
-      <table className="AdminTable">
+      <table>
         <thead>
           <tr>
             <th>Name</th>
