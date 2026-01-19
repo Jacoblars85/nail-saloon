@@ -43,11 +43,7 @@ function Admin() {
               <td>{appointment.name}</td>
               <td>{appointment.phone}</td>
               <td>
-                <p>
                   {dayjs(appointment.start_time).format("YYYY-MM-DD h:mm A")}
-                </p>
-                <p>{dayjs(appointment.start_time).format("YYYY-MM-DD")}</p>
-                <p>{dayjs(appointment.start_time).format("h:mm A")}</p>
               </td>
               <td>
                 <button>e</button>
