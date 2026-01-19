@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import dayjs from "dayjs";
 import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+
 
 function Admin() {
   const [appointments, setAppointments] = useState([]);
@@ -47,7 +49,7 @@ function Admin() {
                   {dayjs(appointment.start_time).format("YYYY-MM-DD h:mm A")}
               </td>
               <td>
-                <button>e</button>
+                <button><EditIcon /></button>
               </td>
               <td>
                 <button><DeleteIcon /></button>
