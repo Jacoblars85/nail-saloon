@@ -26,6 +26,20 @@ function Admin() {
       });
   };
 
+      const editAppointment = (appointment) => {
+    axios({
+      method: "PUT",
+      url: `/api/schedule/edit/appointment`,
+      data: appointment
+    })
+      .then((response) => {
+        getBookedAppointments()
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
     const deleteAppointment = (appointmentID) => {
     axios({
       method: "DELETE",
