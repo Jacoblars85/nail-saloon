@@ -26,6 +26,20 @@ function Admin() {
       });
   };
 
+    const deleteAppointment = (appointmentID) => {
+    axios({
+      method: "DELETE",
+      url: `/api/schedule/appointment`,
+      data: appointmentID
+    })
+      .then((response) => {
+        getBookedAppointments()
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div className="Admin">
       <h2>Admin</h2>
