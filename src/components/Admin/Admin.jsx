@@ -77,7 +77,7 @@ function Admin() {
                   {dayjs(appointment.start_time).format("YYYY-MM-DD h:mm A")}
               </td>
               <td>
-                <button><EditIcon /></button>
+                <button onClick={editAppointment(appointment)}><EditIcon /></button>
               </td>
               <td>
                 <button onClick={deleteAppointment(appointment.id)}><DeleteIcon /></button>
