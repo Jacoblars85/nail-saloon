@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import dayjs from "dayjs";
-import DeleteIcon from '@mui/icons-material/Delete';
-import EditIcon from '@mui/icons-material/Edit';
-
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
 
 function Admin() {
   const [appointments, setAppointments] = useState([]);
@@ -26,28 +25,28 @@ function Admin() {
       });
   };
 
-      const editAppointment = (appointment) => {
+  const editAppointment = (appointment) => {
     axios({
       method: "PUT",
       url: `/api/schedule/edit/appointment`,
-      data: appointment
+      data: appointment,
     })
       .then((response) => {
-        getBookedAppointments()
+        getBookedAppointments();
       })
       .catch((err) => {
         console.log(err);
       });
   };
 
-    const deleteAppointment = (appointmentID) => {
+  const deleteAppointment = (appointmentID) => {
     axios({
       method: "DELETE",
       url: `/api/schedule/appointment`,
-      data: appointmentID
+      data: appointmentID,
     })
       .then((response) => {
-        getBookedAppointments()
+        getBookedAppointments();
       })
       .catch((err) => {
         console.log(err);
@@ -74,13 +73,17 @@ function Admin() {
               <td>{appointment.name}</td>
               <td>{appointment.phone}</td>
               <td>
-                  {dayjs(appointment.start_time).format("YYYY-MM-DD h:mm A")}
+                {dayjs(appointment.start_time).format("YYYY-MM-DD h:mm A")}
               </td>
               <td>
-                <button onClick={editAppointment(appointment)}><EditIcon /></button>
+                <button onClick={editAppointment(appointment)}>
+                  <EditIcon />
+                </button>
               </td>
               <td>
-                <button onClick={deleteAppointment(appointment.id)}><DeleteIcon /></button>
+                <button onClick={deleteAppointment(appointment.id)}>
+                  <DeleteIcon />
+                </button>
               </td>
             </tr>
           ))}
