@@ -66,7 +66,7 @@ function Admin() {
                 <button><EditIcon /></button>
               </td>
               <td>
-                <button><DeleteIcon /></button>
+                <button onClick={deleteAppointment(appointment.id)}><DeleteIcon /></button>
               </td>
             </tr>
           ))}
