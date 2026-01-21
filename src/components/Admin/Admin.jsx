@@ -101,15 +101,16 @@ function Admin() {
                 {dayjs(appointment.start_time).format("YYYY-MM-DD h:mm A")}
               </td>
               <td>
-                <button onClick={handleClickFormOpen(appointment)}>
-                  <EditIcon />
-                </button>
-              </td>
-              <td>
-                <button onClick={deleteAppointment(appointment.id)}>
-                  <DeleteIcon />
-                </button>
-              </td>
+  <button onClick={() => handleClickFormOpen(appointment)}>
+    <EditIcon />
+  </button>
+</td>
+
+<td>
+  <button onClick={() => deleteAppointment(appointment.id)}>
+    <DeleteIcon />
+  </button>
+</td>
             </tr>
           ))}
         </tbody>
