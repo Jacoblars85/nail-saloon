@@ -64,6 +64,16 @@ function Admin() {
       });
   };
 
+    const [openDelete, setOpenDelete] = useState(false);
+
+  const handleClickOpenDelete = () => {
+    setOpenDelete(true);
+  };
+
+  const handleCloseDelete = () => {
+    setOpenDelete(false);
+  };
+
   const deleteAppointment = (appointmentID) => {
     axios({
       method: "DELETE",
@@ -107,7 +117,7 @@ function Admin() {
               </td>
 
               <td>
-                <button onClick={() => deleteAppointment(appointment.id)}>
+                <button onClick={() => handleClickOpenDelete(appointment.id)}>
                   <DeleteIcon />
                 </button>
               </td>
@@ -157,6 +167,28 @@ function Admin() {
           <Button onClick={handleFormClose}>Cancel</Button>
           <Button type="submit" form="subscription-form">
             Edit
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      <Dialog
+        open={openDelete}
+        onClose={handleCloseDelete}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          {"Do you want to delete this appointment?"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Once you delete it, it will be gone for good.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseDelete}>Cancel</Button>
+          <Button onClick={() => deleteAppointment(appointment.id)} autoFocus>
+            Delete
           </Button>
         </DialogActions>
       </Dialog>
