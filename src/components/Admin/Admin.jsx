@@ -42,16 +42,15 @@ function Admin() {
     setOpenForm(false);
   };
 
-  const handleSubmit = (event) => {
+  const editAppointment = (event, appointment) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+
+        const formData = new FormData(event.currentTarget);
     const formJson = Object.fromEntries(formData.entries());
     const email = formJson.email;
     console.log(email);
     handleFormClose();
-  };
 
-  const editAppointment = (appointment) => {
     axios({
       method: "PUT",
       url: `/api/schedule/edit/appointment`,
@@ -102,7 +101,7 @@ function Admin() {
                 {dayjs(appointment.start_time).format("YYYY-MM-DD h:mm A")}
               </td>
               <td>
-                <button onClick={editAppointment(appointment)}>
+                <button onClick={handleClickFormOpen(appointment)}>
                   <EditIcon />
                 </button>
               </td>
@@ -123,7 +122,7 @@ function Admin() {
             To subscribe to this website, please enter your email address here. We
             will send updates occasionally.
           </DialogContentText>
-          <form onSubmit={handleSubmit} id="subscription-form">
+          <form onSubmit={editAppointment} id="subscription-form">
             <TextField
               autoFocus
               required
