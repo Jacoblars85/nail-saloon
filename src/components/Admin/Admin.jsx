@@ -34,6 +34,7 @@ function Admin() {
       });
   };
 
+  // Form Dialog Funcs
   const handleClickFormOpen = () => {
     setOpenForm(true);
   };
@@ -64,6 +65,7 @@ function Admin() {
       });
   };
 
+  // Delete Dialog Funcs
   const handleClickOpenDelete = () => {
     setOpenDelete(true);
   };
