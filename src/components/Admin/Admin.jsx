@@ -14,6 +14,8 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 function Admin() {
   const [appointments, setAppointments] = useState([]);
+  const [openForm, setOpenForm] = useState(false);
+  const [openDelete, setOpenDelete] = useState(false);
 
   useEffect(() => {
     getBookedAppointments();
@@ -31,8 +33,6 @@ function Admin() {
         console.log(err);
       });
   };
-
-  const [openForm, setOpenForm] = useState(false);
 
   const handleClickFormOpen = () => {
     setOpenForm(true);
@@ -63,8 +63,6 @@ function Admin() {
         console.log(err);
       });
   };
-
-  const [openDelete, setOpenDelete] = useState(false);
 
   const handleClickOpenDelete = () => {
     setOpenDelete(true);
