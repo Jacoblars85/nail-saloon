@@ -4,13 +4,13 @@ import axios from "axios";
 import dayjs from "dayjs";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
 
 function Admin() {
   const [appointments, setAppointments] = useState([]);
@@ -45,7 +45,7 @@ function Admin() {
   const editAppointment = (event, appointment) => {
     event.preventDefault();
 
-        const formData = new FormData(event.currentTarget);
+    const formData = new FormData(event.currentTarget);
     const formJson = Object.fromEntries(formData.entries());
     const email = formJson.email;
     console.log(email);
@@ -101,16 +101,16 @@ function Admin() {
                 {dayjs(appointment.start_time).format("YYYY-MM-DD h:mm A")}
               </td>
               <td>
-  <button onClick={() => handleClickFormOpen(appointment)}>
-    <EditIcon />
-  </button>
-</td>
+                <button onClick={() => handleClickFormOpen(appointment)}>
+                  <EditIcon />
+                </button>
+              </td>
 
-<td>
-  <button onClick={() => deleteAppointment(appointment.id)}>
-    <DeleteIcon />
-  </button>
-</td>
+              <td>
+                <button onClick={() => deleteAppointment(appointment.id)}>
+                  <DeleteIcon />
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -119,9 +119,7 @@ function Admin() {
       <Dialog open={openForm} onClose={handleFormClose}>
         <DialogTitle>Edit Information</DialogTitle>
         <DialogContent>
-          <DialogContentText>
-            Edit what is nessary
-          </DialogContentText>
+          <DialogContentText>Edit what is nessary</DialogContentText>
           <form onSubmit={editAppointment} id="subscription-form">
             <TextField
               autoFocus
