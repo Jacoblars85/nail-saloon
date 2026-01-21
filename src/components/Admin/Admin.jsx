@@ -4,6 +4,13 @@ import axios from "axios";
 import dayjs from "dayjs";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
 function Admin() {
   const [appointments, setAppointments] = useState([]);
@@ -23,6 +30,25 @@ function Admin() {
       .catch((err) => {
         console.log(err);
       });
+  };
+
+  const [openForm, setOpenForm] = useState(false);
+
+  const handleClickFormOpen = () => {
+    setOpenForm(true);
+  };
+
+  const handleFormClose = () => {
+    setOpenForm(false);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const formJson = Object.fromEntries(formData.entries());
+    const email = formJson.email;
+    console.log(email);
+    handleFormClose();
   };
 
   const editAppointment = (appointment) => {
@@ -89,6 +115,35 @@ function Admin() {
           ))}
         </tbody>
       </table>
+
+      <Dialog open={openForm} onClose={handleFormClose}>
+        <DialogTitle>Subscribe</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            To subscribe to this website, please enter your email address here. We
+            will send updates occasionally.
+          </DialogContentText>
+          <form onSubmit={handleSubmit} id="subscription-form">
+            <TextField
+              autoFocus
+              required
+              margin="dense"
+              id="name"
+              name="email"
+              label="Email Address"
+              type="email"
+              fullWidth
+              variant="standard"
+            />
+          </form>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleFormClose}>Cancel</Button>
+          <Button type="submit" form="subscription-form">
+            Edit
+          </Button>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 }
