@@ -6,6 +6,7 @@ import SchedulePage from "../SchedulePage/SchedulePage.jsx";
 import ScheduleForm from "../ScheduleForm/ScheduleForm.jsx";
 import Nav from "../Nav/Nav.jsx";
 import Admin from "../Admin/Admin.jsx";
+import Footer from "../Footer/Footer.jsx"
 import "./App.css";
 
 function App() {
@@ -33,6 +34,8 @@ function App() {
         <Route path="/admin" exact>
           <Admin />
         </Route>
+
+        <Footer />
       </Router>
     </div>
   );
