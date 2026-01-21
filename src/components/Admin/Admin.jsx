@@ -64,7 +64,7 @@ function Admin() {
       });
   };
 
-    const [openDelete, setOpenDelete] = useState(false);
+  const [openDelete, setOpenDelete] = useState(false);
 
   const handleClickOpenDelete = () => {
     setOpenDelete(true);
