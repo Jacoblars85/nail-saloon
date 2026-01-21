@@ -116,11 +116,10 @@ function Admin() {
       </table>
 
       <Dialog open={openForm} onClose={handleFormClose}>
-        <DialogTitle>Subscribe</DialogTitle>
+        <DialogTitle>Edit Information</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            To subscribe to this website, please enter your email address here. We
-            will send updates occasionally.
+            Edit what is nessary
           </DialogContentText>
           <form onSubmit={editAppointment} id="subscription-form">
             <TextField
@@ -128,9 +127,28 @@ function Admin() {
               required
               margin="dense"
               id="name"
-              name="email"
-              label="Email Address"
-              type="email"
+              name="name"
+              label="Name"
+              fullWidth
+              variant="standard"
+            />
+            <TextField
+              autoFocus
+              required
+              margin="dense"
+              id="phoneNumber"
+              name="phone number"
+              label="Phone Number"
+              fullWidth
+              variant="standard"
+            />
+            <TextField
+              autoFocus
+              required
+              margin="dense"
+              id="date"
+              name="date"
+              label="Date and Time"
               fullWidth
               variant="standard"
             />
