@@ -126,6 +126,7 @@ function Admin() {
         </tbody>
       </table>
 
+      {/* Form Dialog */}
       <Dialog open={openForm} onClose={handleFormClose}>
         <DialogTitle>Edit Information</DialogTitle>
         <DialogContent>
@@ -171,6 +172,7 @@ function Admin() {
         </DialogActions>
       </Dialog>
 
+      {/* Delete Dialog */}
       <Dialog
         open={openDelete}
         onClose={handleCloseDelete}
