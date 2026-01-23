@@ -6,12 +6,12 @@ function Footer() {
   useEffect(() => {}, []);
 
   return (
-    <div className="Footer">
+    <footer className="Footer">
       <h2>Contact Information</h2>
       <p>Email: </p>
       <p>phone Number: </p>
 
-    </div>
+    </footer>
   );
 }
 
