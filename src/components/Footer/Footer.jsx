@@ -10,7 +10,6 @@ function Footer() {
       <h2>Contact Information</h2>
       <p>Email: </p>
       <p>phone Number: </p>
-
     </footer>
   );
 }
