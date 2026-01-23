@@ -8,12 +8,12 @@ function Footer() {
   return (
     <footer className="Footer">
       <div>
-        <h2>Contact Information</h2>
+        <h3>Contact Information</h3>
         <p>Email: </p>
         <p>phone Number: </p>
       </div>
       <div>
-        <h2>Hours</h2>
+        <h3>Hours</h3>
         <p>weekdays: 10-6</p>
         <p>weekends: 10-6</p>
         <p>Holidays: Closed</p>
