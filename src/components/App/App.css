@@ -215,3 +215,13 @@ tbody tr:nth-child(odd) {
 tbody tr:nth-child(even) {
   background: #dcdcdc;
 }
+
+/* --------------------------------------------------------------------------------
+Footer
+-------------------------------------------------------------------------------- */
+
+footer {
+  margin-top: 80px;
+  padding: 20px;
+  text-align: center;
+}
