@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 
 function Footer() {
-  const dispatch = useDispatch();
-
   useEffect(() => {}, []);
 
   return (
