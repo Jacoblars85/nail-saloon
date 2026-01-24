@@ -14,6 +14,9 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 function Admin() {
   const [appointments, setAppointments] = useState([]);
+    const [nameInput, setNameInput] = useState("");
+    const [phoneInput, setPhoneInput] = useState("");
+    const [dateInput, setDateInput] = useState(dayjs());
   const [openForm, setOpenForm] = useState(false);
   const [openDelete, setOpenDelete] = useState(false);
 
@@ -35,7 +38,7 @@ function Admin() {
   };
 
   // Form Dialog Funcs
-  const handleClickFormOpen = () => {
+  const handleClickFormOpen = (appointment) => {
     setOpenForm(true);
   };
 
@@ -46,10 +49,10 @@ function Admin() {
   const editAppointment = (event, appointment) => {
     event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
-    const formJson = Object.fromEntries(formData.entries());
-    const email = formJson.email;
-    console.log(email);
+    // const formData = new FormData(event.currentTarget);
+    // const formJson = Object.fromEntries(formData.entries());
+    // const email = formJson.email;
+    // console.log(email);
     handleFormClose();
 
     axios({
