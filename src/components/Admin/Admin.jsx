@@ -14,9 +14,9 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 function Admin() {
   const [appointments, setAppointments] = useState([]);
-    const [nameInput, setNameInput] = useState("");
-    const [phoneInput, setPhoneInput] = useState("");
-    const [dateInput, setDateInput] = useState(dayjs());
+  const [nameInput, setNameInput] = useState("");
+  const [phoneInput, setPhoneInput] = useState("");
+  const [dateInput, setDateInput] = useState(dayjs());
   const [openForm, setOpenForm] = useState(false);
   const [openDelete, setOpenDelete] = useState(false);
 
@@ -39,9 +39,9 @@ function Admin() {
 
   // Form Dialog Funcs
   const handleClickFormOpen = (appointment) => {
-    setNameInput(appointment.name)
-    setPhoneInput(appointment.phone)
-    setDateInput(appointment.start_time)
+    setNameInput(appointment.name);
+    setPhoneInput(appointment.phone);
+    setDateInput(appointment.start_time);
     setOpenForm(true);
   };
 
@@ -148,7 +148,7 @@ function Admin() {
               fullWidth
               variant="standard"
               value={nameInput}
-          onChange={(e) => setNameInput(e.target.value)}
+              onChange={(e) => setNameInput(e.target.value)}
             />
             <TextField
               autoFocus
@@ -160,7 +160,7 @@ function Admin() {
               fullWidth
               variant="standard"
               value={phoneInput}
-          onChange={(e) => setPhoneInput(e.target.value)}
+              onChange={(e) => setPhoneInput(e.target.value)}
             />
             <TextField
               autoFocus
@@ -172,7 +172,7 @@ function Admin() {
               fullWidth
               variant="standard"
               value={dateInput}
-          onChange={(e) => setDateInput(e.target.value)}
+              onChange={(e) => setDateInput(e.target.value)}
             />
           </form>
         </DialogContent>
