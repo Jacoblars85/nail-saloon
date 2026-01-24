@@ -39,6 +39,9 @@ function Admin() {
 
   // Form Dialog Funcs
   const handleClickFormOpen = (appointment) => {
+    setNameInput(appointment.name)
+    setPhoneInput(appointment.phone)
+    setDateInput(appointment.start_time)
     setOpenForm(true);
   };
 
@@ -144,6 +147,8 @@ function Admin() {
               label="Name"
               fullWidth
               variant="standard"
+              value={nameInput}
+          onChange={(e) => setNameInput(e.target.value)}
             />
             <TextField
               autoFocus
@@ -154,6 +159,8 @@ function Admin() {
               label="Phone Number"
               fullWidth
               variant="standard"
+              value={phoneInput}
+          onChange={(e) => setPhoneInput(e.target.value)}
             />
             <TextField
               autoFocus
@@ -164,6 +171,8 @@ function Admin() {
               label="Date and Time"
               fullWidth
               variant="standard"
+              value={dateInput}
+          onChange={(e) => setDateInput(e.target.value)}
             />
           </form>
         </DialogContent>
