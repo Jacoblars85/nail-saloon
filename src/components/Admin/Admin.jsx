@@ -52,6 +52,8 @@ function Admin() {
   const editAppointment = (event, appointment) => {
     event.preventDefault();
 
+    console.log('appointment in post', appointment);
+    
     // const formData = new FormData(event.currentTarget);
     // const formJson = Object.fromEntries(formData.entries());
     // const email = formJson.email;
@@ -136,7 +138,6 @@ function Admin() {
       <Dialog open={openForm} onClose={handleFormClose}>
         <DialogTitle>Edit Information</DialogTitle>
         <DialogContent>
-          <DialogContentText>Edit what is nessary</DialogContentText>
           <form onSubmit={editAppointment} id="subscription-form">
             <TextField
               autoFocus
