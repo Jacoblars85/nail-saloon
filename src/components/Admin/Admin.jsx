@@ -52,8 +52,8 @@ function Admin() {
   const editAppointment = (event, appointment) => {
     event.preventDefault();
 
-    console.log('appointment in post', appointment);
-    
+    console.log("appointment in post", appointment);
+
     handleFormClose();
 
     axios({
