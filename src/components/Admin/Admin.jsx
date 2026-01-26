@@ -14,6 +14,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 function Admin() {
   const [appointments, setAppointments] = useState([]);
+  const [appointmentId, setAppointmentId] = useState(0);
   const [nameInput, setNameInput] = useState("");
   const [phoneInput, setPhoneInput] = useState("");
   const [dateInput, setDateInput] = useState(dayjs());
@@ -39,6 +40,7 @@ function Admin() {
 
   // Form Dialog Funcs
   const handleClickFormOpen = (appointment) => {
+    setAppointmentId(appointment.id)
     setNameInput(appointment.name);
     setPhoneInput(appointment.phone);
     setDateInput(appointment.start_time);
@@ -71,6 +73,7 @@ function Admin() {
 
   // Delete Dialog Funcs
   const handleClickOpenDelete = () => {
+    setAppointmentId(appointment.id)
     setOpenDelete(true);
   };
 
@@ -121,7 +124,7 @@ function Admin() {
               </td>
 
               <td>
-                <button onClick={() => handleClickOpenDelete(appointment.id)}>
+                <button onClick={() => handleClickOpenDelete(appointment)}>
                   <DeleteIcon />
                 </button>
               </td>
