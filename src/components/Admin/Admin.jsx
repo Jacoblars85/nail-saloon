@@ -72,7 +72,7 @@ function Admin() {
   };
 
   // Delete Dialog Funcs
-  const handleClickOpenDelete = () => {
+  const handleClickOpenDelete = (appointment) => {
     setAppointmentId(appointment.id)
     setOpenDelete(true);
   };
@@ -81,11 +81,11 @@ function Admin() {
     setOpenDelete(false);
   };
 
-  const deleteAppointment = (appointmentID) => {
+  const deleteAppointment = () => {
     axios({
       method: "DELETE",
       url: `/api/schedule/appointment`,
-      data: appointmentID,
+      data: appointmentId,
     })
       .then((response) => {
         getBookedAppointments();
