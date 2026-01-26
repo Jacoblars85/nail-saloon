@@ -56,7 +56,6 @@ function Admin() {
 
     console.log("appointment in post", appointment);
 
-    handleFormClose();
 
     axios({
       method: "PUT",
@@ -69,6 +68,11 @@ function Admin() {
       .catch((err) => {
         console.log(err);
       });
+
+setNameInput("");
+      setPhoneInput("");
+      setDateInput(dayjs());
+      handleFormClose();
   };
 
   // Delete Dialog Funcs
@@ -93,6 +97,9 @@ function Admin() {
       .catch((err) => {
         console.log(err);
       });
+
+      setAppointmentId(0)
+      handleCloseDelete()
   };
 
   return (
