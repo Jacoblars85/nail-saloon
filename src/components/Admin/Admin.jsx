@@ -70,7 +70,7 @@ function Admin() {
     axios({
       method: "PUT",
       url: `/api/schedule/edit/appointment`,
-      data: appointment,
+      data: appointmentDetails,
     })
       .then((response) => {
         getBookedAppointments();
