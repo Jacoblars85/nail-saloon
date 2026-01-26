@@ -55,10 +55,17 @@ function Admin() {
     setOpenForm(false);
   };
 
-  const editAppointment = (event, appointment) => {
+  const editAppointment = (event) => {
     event.preventDefault();
 
-    console.log("appointment in post", appointment);
+    let appointmentDetails = {
+            appointmentId: appointmentId,
+            nameInput: nameInput,
+            phoneInput: phoneInput,
+            dateInput: dateInput,
+          };
+
+    console.log("appointmentDetails in post", appointmentDetails);
 
     axios({
       method: "PUT",
