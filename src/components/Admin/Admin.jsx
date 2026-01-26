@@ -48,6 +48,10 @@ function Admin() {
   };
 
   const handleFormClose = () => {
+    setAppointmentId(0);
+    setNameInput("");
+    setPhoneInput("");
+    setDateInput(dayjs());
     setOpenForm(false);
   };
 
@@ -68,9 +72,7 @@ function Admin() {
         console.log(err);
       });
 
-    setNameInput("");
-    setPhoneInput("");
-    setDateInput(dayjs());
+    
     handleFormClose();
   };
 
@@ -81,6 +83,7 @@ function Admin() {
   };
 
   const handleCloseDelete = () => {
+    setAppointmentId(0);
     setOpenDelete(false);
   };
 
@@ -97,7 +100,6 @@ function Admin() {
         console.log(err);
       });
 
-    setAppointmentId(0);
     handleCloseDelete();
   };
 
