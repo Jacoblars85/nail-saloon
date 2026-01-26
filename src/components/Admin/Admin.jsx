@@ -40,7 +40,7 @@ function Admin() {
 
   // Form Dialog Funcs
   const handleClickFormOpen = (appointment) => {
-    setAppointmentId(appointment.id)
+    setAppointmentId(appointment.id);
     setNameInput(appointment.name);
     setPhoneInput(appointment.phone);
     setDateInput(appointment.start_time);
@@ -56,7 +56,6 @@ function Admin() {
 
     console.log("appointment in post", appointment);
 
-
     axios({
       method: "PUT",
       url: `/api/schedule/edit/appointment`,
@@ -69,15 +68,15 @@ function Admin() {
         console.log(err);
       });
 
-setNameInput("");
-      setPhoneInput("");
-      setDateInput(dayjs());
-      handleFormClose();
+    setNameInput("");
+    setPhoneInput("");
+    setDateInput(dayjs());
+    handleFormClose();
   };
 
   // Delete Dialog Funcs
   const handleClickOpenDelete = (appointment) => {
-    setAppointmentId(appointment.id)
+    setAppointmentId(appointment.id);
     setOpenDelete(true);
   };
 
@@ -98,8 +97,8 @@ setNameInput("");
         console.log(err);
       });
 
-      setAppointmentId(0)
-      handleCloseDelete()
+    setAppointmentId(0);
+    handleCloseDelete();
   };
 
   return (
