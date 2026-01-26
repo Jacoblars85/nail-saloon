@@ -59,11 +59,11 @@ function Admin() {
     event.preventDefault();
 
     let appointmentDetails = {
-            appointmentId: appointmentId,
-            nameInput: nameInput,
-            phoneInput: phoneInput,
-            dateInput: dateInput,
-          };
+      appointmentId: appointmentId,
+      nameInput: nameInput,
+      phoneInput: phoneInput,
+      dateInput: dateInput,
+    };
 
     console.log("appointmentDetails in post", appointmentDetails);
 
