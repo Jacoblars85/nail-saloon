@@ -72,7 +72,6 @@ function Admin() {
         console.log(err);
       });
 
-    
     handleFormClose();
   };
 
