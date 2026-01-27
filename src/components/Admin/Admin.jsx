@@ -129,7 +129,7 @@ function Admin() {
               <td>{appointment.name}</td>
               <td>{appointment.phone}</td>
               <td>
-                {dayjs(appointment.start_time).format("YYYY-MM-DD h:mm A")}
+                {dayjs(appointment.start_time).format("MM-DD-YYYY h:mm A")}
               </td>
               <td>
                 <button onClick={() => handleClickFormOpen(appointment)}>
