@@ -43,7 +43,7 @@ function Admin() {
     setAppointmentId(appointment.id);
     setNameInput(appointment.name);
     setPhoneInput(appointment.phone);
-    setDateInput(appointment.start_time);
+    setDateInput(dayjs(appointment.start_time).format("MM-DD-YYYY h:mm A"));
     setOpenForm(true);
   };
 
