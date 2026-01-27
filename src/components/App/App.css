@@ -4,6 +4,7 @@ body,
   height: 100dvh;
   width: 100dvw;
   margin: 0;
+  background-color: #e1e4e4;
 }
 
 /* --------------------------------------------------------------------------------
@@ -222,6 +223,7 @@ Footer
 
 footer {
   padding: 20px;
+  margin-top: 20px;
   text-align: center;
   border-top: 2px solid black;
 }
