@@ -223,12 +223,13 @@ Footer
 footer {
   padding: 20px;
   text-align: center;
+  border-top: 2px solid black;
 }
 
 .Footer {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
   background-color: #e1e4e4;
