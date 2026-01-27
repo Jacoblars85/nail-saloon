@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   useEffect(() => {}, []);
@@ -12,10 +13,15 @@ function Footer() {
       </div>
       <div>
         <h3>Important Links</h3>
+        <Link to="/">
         <p>Home</p>
+        </Link>
+        <Link to="/about">
         <p>About Us</p>
+        </Link>
+         <Link to="/schedule">
         <p>Schedule Now</p>
-        <p></p>
+        </Link>
       </div>
       <div>
         <h3>Hours</h3>
