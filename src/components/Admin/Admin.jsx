@@ -62,7 +62,7 @@ function Admin() {
       appointmentId: appointmentId,
       nameInput: nameInput,
       phoneInput: phoneInput,
-      dateInput: dateInput,
+      dateInput: dayjs(dateInput).format("YYYY-MM-DD HH:mm"),
     };
 
     console.log("appointmentDetails in post", appointmentDetails);
