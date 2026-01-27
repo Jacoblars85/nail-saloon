@@ -215,7 +215,7 @@ function Admin() {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleCloseDelete}>Cancel</Button>
-          <Button onClick={() => deleteAppointment()} autoFocus>
+          <Button onClick={() => deleteAppointment()} autoFocus color="error">
             Delete
           </Button>
         </DialogActions>
