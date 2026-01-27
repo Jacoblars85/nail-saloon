@@ -230,7 +230,11 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  align-items:baseline;
   text-align: center;
   background-color: #e1e4e4;
+}
+
+.Footer h3 {
+  border-bottom: 1px solid black;
 }
