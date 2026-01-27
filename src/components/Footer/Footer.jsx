@@ -14,13 +14,13 @@ function Footer() {
       <div>
         <h3>Important Links</h3>
         <Link to="/">
-        <p>Home</p>
+          <p>Home</p>
         </Link>
         <Link to="/about">
-        <p>About Us</p>
+          <p>About Us</p>
         </Link>
-         <Link to="/schedule">
-        <p>Schedule Now</p>
+        <Link to="/schedule">
+          <p>Schedule Now</p>
         </Link>
       </div>
       <div>
