@@ -191,7 +191,7 @@ function Admin() {
           </form>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleFormClose}>Cancel</Button>
+          <Button onClick={handleFormClose} color="">Cancel</Button>
           <Button type="submit" form="subscription-form">
             Edit
           </Button>
@@ -214,7 +214,7 @@ function Admin() {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleCloseDelete}>Cancel</Button>
+          <Button onClick={handleCloseDelete} color="">Cancel</Button>
           <Button onClick={() => deleteAppointment()} autoFocus color="error">
             Delete
           </Button>
