@@ -6,7 +6,7 @@ function Footer() {
 
   return (
     <footer className="Footer">
-        <div>
+      <div>
         <h3>Links</h3>
         <Link to="/">
           <p>Home</p>
@@ -18,12 +18,13 @@ function Footer() {
           <p>Schedule Now</p>
         </Link>
       </div>
+      
       <div>
         <h3>Contact Information</h3>
         <p>Email: nail.saloon@gmail.com</p>
         <p>Number: 123-456-7890</p>
       </div>
-      
+
       <div>
         <h3>Hours</h3>
         <p>weekdays: 10-6</p>
