@@ -237,6 +237,10 @@ footer {
   background-color: #e1e4e4;
 }
 
+.Footer div {
+  width: 155px;
+}
+
 .Footer h3 {
   border-bottom: 1px solid black;
 }
