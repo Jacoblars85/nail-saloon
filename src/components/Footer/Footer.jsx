@@ -1,9 +1,6 @@
-import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Footer() {
-  useEffect(() => {}, []);
-
   return (
     <footer className="Footer">
       <div>
@@ -18,7 +15,7 @@ function Footer() {
           <p>Schedule Now</p>
         </Link>
       </div>
-      
+
       <div>
         <h3>Contact Information</h3>
         <p>Email: nail.saloon@gmail.com</p>
