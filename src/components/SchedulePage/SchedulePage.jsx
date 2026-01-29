@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import ScheduleForm from "../ScheduleForm/ScheduleForm.jsx";
 import Button from "@mui/material/Button";
 
 function SchedulePage() {
