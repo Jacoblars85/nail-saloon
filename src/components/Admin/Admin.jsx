@@ -113,6 +113,8 @@ function Admin() {
     <div className="Admin">
       <h2>Admin</h2>
 
+<button>sort</button>
+
       <table>
         <thead>
           <tr>
