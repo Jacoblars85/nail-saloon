@@ -115,7 +115,7 @@ function Admin() {
 
       <h3>Todays Appointments</h3>
 
-            <table>
+      <table>
         <thead>
           <tr>
             <th>Name</th>
