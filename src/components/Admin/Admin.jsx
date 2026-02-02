@@ -13,7 +13,7 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 
 function Admin() {
-  const [appointments, setAppointments] = useState([]);
+  const [allAppointments, setAllAppointments] = useState([]);
   const [appointmentId, setAppointmentId] = useState(0);
   const [nameInput, setNameInput] = useState("");
   const [phoneInput, setPhoneInput] = useState("");
@@ -31,7 +31,7 @@ function Admin() {
       url: `/api/schedule/booked/appointments`,
     })
       .then((response) => {
-        setAppointments(response.data);
+        setAllAppointments(response.data);
       })
       .catch((err) => {
         console.log(err);
@@ -162,7 +162,7 @@ function Admin() {
           </tr>
         </thead>
         <tbody>
-          {appointments.map((appointment) => (
+          {allAppointments.map((appointment) => (
             <tr key={appointment.id} className="AdminBox">
               <td>{appointment.name}</td>
               <td>{appointment.phone}</td>
