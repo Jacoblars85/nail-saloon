@@ -14,6 +14,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 function Admin() {
   const [allAppointments, setAllAppointments] = useState([]);
+  const [todaysAppointments, setTodaysAppointments] = useState([]);
   const [appointmentId, setAppointmentId] = useState(0);
   const [nameInput, setNameInput] = useState("");
   const [phoneInput, setPhoneInput] = useState("");
@@ -126,7 +127,7 @@ function Admin() {
           </tr>
         </thead>
         <tbody>
-          {appointments.map((appointment) => (
+          {todaysAppointments.map((appointment) => (
             <tr key={appointment.id} className="AdminBox">
               <td>{appointment.name}</td>
               <td>{appointment.phone}</td>
