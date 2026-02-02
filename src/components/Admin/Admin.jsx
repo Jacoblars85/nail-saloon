@@ -26,6 +26,19 @@ function Admin() {
     getBookedAppointments();
   }, []);
 
+    const getTodaysAppointments = () => {
+    axios({
+      method: "GET",
+      url: `/api/schedule/todays/appointments/${dayjs()}`,
+    })
+      .then((response) => {
+        setTodaysAppointments(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   const getBookedAppointments = () => {
     axios({
       method: "GET",
