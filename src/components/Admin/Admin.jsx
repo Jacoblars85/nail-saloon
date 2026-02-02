@@ -24,12 +24,13 @@ function Admin() {
 
   useEffect(() => {
     getBookedAppointments();
+    getTodaysAppointments(dayjs())
   }, []);
 
-    const getTodaysAppointments = () => {
+    const getTodaysAppointments = (date) => {
     axios({
       method: "GET",
-      url: `/api/schedule/todays/appointments/${dayjs()}`,
+      url: `/api/schedule/todays/appointments/${date}`,
     })
       .then((response) => {
         setTodaysAppointments(response.data);
