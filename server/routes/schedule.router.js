@@ -31,7 +31,7 @@ WHERE slot NOT IN (
 });
 
 router.get("/todays/appointments/:id", (req, res) => {
-  // console.log('im in open appointments route');
+  console.log('im in todays appointments route', req.params.id);
 
   const query = `
 SELECT *
