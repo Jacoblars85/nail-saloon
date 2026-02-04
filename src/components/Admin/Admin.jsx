@@ -28,8 +28,8 @@ function Admin() {
   }, []);
 
   const getTodaysAppointments = (date) => {
-    console.log('date', date);
-    
+    console.log("date", date);
+
     axios({
       method: "GET",
       url: `/api/schedule/todays/appointments/${date}`,
