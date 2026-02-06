@@ -132,10 +132,10 @@ function Admin() {
     handleCloseDelete();
   };
 
-  const [age, setAge] = React.useState('');
+  const [dateSelect, setDateSelect] = useState('');
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
+  const handleChangeSelectButton = (event) => {
+    setDateSelect(event.target.value);
   };
 
   return (
@@ -147,17 +147,17 @@ function Admin() {
       <button>change day</button>
       <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+        <InputLabel id="demo-simple-select-label">Today</InputLabel>
         <Select
-          labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={age}
+          value={dateSelect}
           label="Age"
-          onChange={handleChange}
+          onChange={handleChangeSelectButton}
         >
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          <MenuItem value={10}>Today</MenuItem>
+          <MenuItem value={20}>Tomorow</MenuItem>
+          <MenuItem value={30}>This Week</MenuItem>
+          <MenuItem value={40}>This Month</MenuItem>
         </Select>
       </FormControl>
     </Box>
