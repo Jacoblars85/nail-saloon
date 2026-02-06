@@ -131,6 +131,8 @@ function Admin() {
       <h2>Admin</h2>
 
       <h3>Todays Appointments</h3>
+      
+      <button>change day</button>
 
       <table>
         <thead>
