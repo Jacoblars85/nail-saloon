@@ -12,11 +12,11 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 
 function Admin() {
   const [allAppointments, setAllAppointments] = useState([]);
@@ -132,7 +132,7 @@ function Admin() {
     handleCloseDelete();
   };
 
-  const [dateSelect, setDateSelect] = useState('');
+  const [dateSelect, setDateSelect] = useState("");
 
   const handleChangeSelectButton = (event) => {
     setDateSelect(event.target.value);
@@ -146,21 +146,21 @@ function Admin() {
 
       <button>change day</button>
       <Box sx={{ minWidth: 120 }}>
-      <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Today</InputLabel>
-        <Select
-          id="demo-simple-select"
-          value={dateSelect}
-          label="Age"
-          onChange={handleChangeSelectButton}
-        >
-          <MenuItem value={10}>Today</MenuItem>
-          <MenuItem value={20}>Tomorow</MenuItem>
-          <MenuItem value={30}>This Week</MenuItem>
-          <MenuItem value={40}>This Month</MenuItem>
-        </Select>
-      </FormControl>
-    </Box>
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Today</InputLabel>
+          <Select
+            id="demo-simple-select"
+            value={dateSelect}
+            label="Age"
+            onChange={handleChangeSelectButton}
+          >
+            <MenuItem value={10}>Today</MenuItem>
+            <MenuItem value={20}>Tomorow</MenuItem>
+            <MenuItem value={30}>This Week</MenuItem>
+            <MenuItem value={40}>This Month</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
 
       <table>
         <thead>
