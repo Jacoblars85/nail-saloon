@@ -11,7 +11,6 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -19,7 +18,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 function Admin() {
-      const [dateSelect, setDateSelect] = useState("");
+  const [dateSelect, setDateSelect] = useState("");
   const [allAppointments, setAllAppointments] = useState([]);
   const [todaysAppointments, setTodaysAppointments] = useState([]);
   const [appointmentId, setAppointmentId] = useState(0);
@@ -33,8 +32,6 @@ function Admin() {
     getBookedAppointments();
     getTodaysAppointments(dayjs());
   }, []);
-
-
 
   const handleChangeSelectButton = (event) => {
     setDateSelect(event.target.value);
@@ -138,7 +135,6 @@ function Admin() {
 
     handleCloseDelete();
   };
-
 
   return (
     <div className="Admin">
