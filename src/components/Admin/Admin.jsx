@@ -19,6 +19,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 function Admin() {
+      const [dateSelect, setDateSelect] = useState("");
   const [allAppointments, setAllAppointments] = useState([]);
   const [todaysAppointments, setTodaysAppointments] = useState([]);
   const [appointmentId, setAppointmentId] = useState(0);
@@ -32,6 +33,12 @@ function Admin() {
     getBookedAppointments();
     getTodaysAppointments(dayjs());
   }, []);
+
+
+
+  const handleChangeSelectButton = (event) => {
+    setDateSelect(event.target.value);
+  };
 
   const getTodaysAppointments = (date) => {
     console.log("date", date);
@@ -132,11 +139,6 @@ function Admin() {
     handleCloseDelete();
   };
 
-  const [dateSelect, setDateSelect] = useState("");
-
-  const handleChangeSelectButton = (event) => {
-    setDateSelect(event.target.value);
-  };
 
   return (
     <div className="Admin">
@@ -151,11 +153,11 @@ function Admin() {
           <Select
             id="demo-simple-select"
             value={dateSelect}
-            label="Age"
+            label="Date"
             onChange={handleChangeSelectButton}
           >
             <MenuItem value={10}>Today</MenuItem>
-            <MenuItem value={20}>Tomorow</MenuItem>
+            <MenuItem value={20}>Tomorrow</MenuItem>
             <MenuItem value={30}>This Week</MenuItem>
             <MenuItem value={40}>This Month</MenuItem>
           </Select>
