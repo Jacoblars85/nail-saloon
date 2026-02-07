@@ -35,7 +35,7 @@ function Admin() {
 
     useEffect(() => {
       if (dateSelect === 'today') {
-        
+        getTodaysAppointments(dayjs());
       } else if (dateSelect === 'tomorrow') {
         
       } else if (dateSelect === 'week') {
@@ -43,10 +43,9 @@ function Admin() {
       } else if (dateSelect === 'month') {
         
       } else if (dateSelect === 'all') {
-        
+        getBookedAppointments();
       }
-    getBookedAppointments();
-    getTodaysAppointments(dayjs());
+    
   }, [dateSelect]);
 
   const handleChangeSelectButton = (event) => {
@@ -168,10 +167,11 @@ function Admin() {
             label="Date"
             onChange={handleChangeSelectButton}
           >
-            <MenuItem value={10}>Today</MenuItem>
-            <MenuItem value={20}>Tomorrow</MenuItem>
-            <MenuItem value={30}>This Week</MenuItem>
-            <MenuItem value={40}>This Month</MenuItem>
+            <MenuItem value={'today'}>Today</MenuItem>
+            <MenuItem value={'tomorrow'}>Tomorrow</MenuItem>
+            <MenuItem value={'week'}>This Week</MenuItem>
+            <MenuItem value={'month'}>This Month</MenuItem>
+            <MenuItem value={'all'}>All</MenuItem>
           </Select>
         </FormControl>
       </Box>
