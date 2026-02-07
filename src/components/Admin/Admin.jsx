@@ -33,6 +33,22 @@ function Admin() {
     getTodaysAppointments(dayjs());
   }, []);
 
+    useEffect(() => {
+      if (dateSelect === 'today') {
+        
+      } else if (dateSelect === 'tomorrow') {
+        
+      } else if (dateSelect === 'week') {
+        
+      } else if (dateSelect === 'month') {
+        
+      } else if (dateSelect === 'all') {
+        
+      }
+    getBookedAppointments();
+    getTodaysAppointments(dayjs());
+  }, [dateSelect]);
+
   const handleChangeSelectButton = (event) => {
     setDateSelect(event.target.value);
   };
