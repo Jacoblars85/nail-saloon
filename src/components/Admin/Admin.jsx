@@ -154,7 +154,6 @@ function Admin() {
 
       <h3>{dateSelect}'s Appointments</h3>
 
-      <button>change day</button>
       <Box sx={{ minWidth: 120 }}>
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">Today</InputLabel>
@@ -206,8 +205,6 @@ function Admin() {
           ))}
         </tbody>
       </table>
-
-      <button>sort</button>
 
       <table>
         <thead>
