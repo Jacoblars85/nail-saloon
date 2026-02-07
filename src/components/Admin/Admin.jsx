@@ -36,8 +36,10 @@ function Admin() {
     useEffect(() => {
       if (dateSelect === 'today') {
         getTodaysAppointments(dayjs());
+
       } else if (dateSelect === 'tomorrow') {
-        
+         getTodaysAppointments(dayjs());
+
       } else if (dateSelect === 'week') {
         
       } else if (dateSelect === 'month') {
@@ -155,7 +157,7 @@ function Admin() {
     <div className="Admin">
       <h2>Admin</h2>
 
-      <h3>Todays Appointments</h3>
+      <h3>{dateSelect}'s Appointments</h3>
 
       <button>change day</button>
       <Box sx={{ minWidth: 120 }}>
