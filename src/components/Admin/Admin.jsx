@@ -183,7 +183,7 @@ function Admin() {
           </tr>
         </thead>
         <tbody>
-          {todaysAppointments.map((appointment) => (
+          {todaysAppointments ? todaysAppointments.map((appointment) => (
             <tr key={appointment.id} className="AdminBox">
               <td>{appointment.name}</td>
               <td>{appointment.phone}</td>
@@ -202,7 +202,7 @@ function Admin() {
                 </button>
               </td>
             </tr>
-          ))}
+          )) : <p>No appointments avalible</p>}
         </tbody>
       </table>
 
