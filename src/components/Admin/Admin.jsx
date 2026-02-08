@@ -183,26 +183,30 @@ function Admin() {
           </tr>
         </thead>
         <tbody>
-          {todaysAppointments ? todaysAppointments.map((appointment) => (
-            <tr key={appointment.id} className="AdminBox">
-              <td>{appointment.name}</td>
-              <td>{appointment.phone}</td>
-              <td>
-                {dayjs(appointment.start_time).format("MM-DD-YYYY h:mm A")}
-              </td>
-              <td>
-                <button onClick={() => handleClickFormOpen(appointment)}>
-                  <EditIcon />
-                </button>
-              </td>
+          {todaysAppointments ? (
+            todaysAppointments.map((appointment) => (
+              <tr key={appointment.id} className="AdminBox">
+                <td>{appointment.name}</td>
+                <td>{appointment.phone}</td>
+                <td>
+                  {dayjs(appointment.start_time).format("MM-DD-YYYY h:mm A")}
+                </td>
+                <td>
+                  <button onClick={() => handleClickFormOpen(appointment)}>
+                    <EditIcon />
+                  </button>
+                </td>
 
-              <td>
-                <button onClick={() => handleClickOpenDelete(appointment)}>
-                  <DeleteIcon />
-                </button>
-              </td>
-            </tr>
-          )) : <p>No appointments avalible</p>}
+                <td>
+                  <button onClick={() => handleClickOpenDelete(appointment)}>
+                    <DeleteIcon />
+                  </button>
+                </td>
+              </tr>
+            ))
+          ) : (
+            <p>No appointments avalible</p>
+          )}
         </tbody>
       </table>
 
