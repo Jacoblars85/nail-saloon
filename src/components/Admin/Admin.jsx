@@ -18,7 +18,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 function Admin() {
-  const [dateSelect, setDateSelect] = useState("");
+  const [dateSelect, setDateSelect] = useState("today");
   const [allAppointments, setAllAppointments] = useState([]);
   const [todaysAppointments, setTodaysAppointments] = useState([]);
   const [appointmentId, setAppointmentId] = useState(0);
