@@ -28,10 +28,10 @@ function Admin() {
   const [openForm, setOpenForm] = useState(false);
   const [openDelete, setOpenDelete] = useState(false);
 
-  useEffect(() => {
-    getBookedAppointments();
-    getTodaysAppointments(dayjs());
-  }, []);
+  // useEffect(() => {
+  //   getBookedAppointments();
+  //   getTodaysAppointments(dayjs());
+  // }, []);
 
   useEffect(() => {
     if (dateSelect === "today") {
