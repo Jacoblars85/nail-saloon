@@ -210,7 +210,7 @@ function Admin() {
         </tbody>
       </table>
 
-      <table>
+      {/* <table>
         <thead>
           <tr>
             <th>Name</th>
@@ -242,7 +242,7 @@ function Admin() {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table> */}
 
       {/* Form Dialog */}
       <Dialog open={openForm} onClose={handleFormClose}>
