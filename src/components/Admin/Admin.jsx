@@ -205,7 +205,7 @@ function Admin() {
               </tr>
             ))
           ) : (
-            <p>No appointments avalible</p>
+            <h4>No appointments avalible</h4>
           )}
         </tbody>
       </table>
