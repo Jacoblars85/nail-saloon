@@ -72,7 +72,6 @@ function Admin() {
       .then((response) => {
         setAllAppointments(response.data);
         setTodaysAppointments(response.data);
-
       })
       .catch((err) => {
         console.log(err);
