@@ -64,6 +64,20 @@ function Admin() {
       });
   };
 
+    const getWeeksAppointments = () => {
+    axios({
+      method: "GET",
+      url: `/api/schedule/week/appointments`,
+    })
+      .then((response) => {
+        setTodaysAppointments(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+
   const getBookedAppointments = () => {
     axios({
       method: "GET",
