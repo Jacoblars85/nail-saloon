@@ -39,9 +39,9 @@ function Admin() {
     } else if (dateSelect === "tomorrow") {
       getTodaysAppointments(dayjs());
     } else if (dateSelect === "week") {
-      getWeeksAppointments({start: dayjs(), end: 7})
+      getWeeksAppointments({ start: dayjs(), end: 7 });
     } else if (dateSelect === "month") {
-      getWeeksAppointments({start: dayjs(), end: 31})
+      getWeeksAppointments({ start: dayjs(), end: 31 });
     } else if (dateSelect === "all") {
       getBookedAppointments();
     }
@@ -66,7 +66,7 @@ function Admin() {
       });
   };
 
-    const getWeeksAppointments = (date) => {
+  const getWeeksAppointments = (date) => {
     axios({
       method: "GET",
       url: `/api/schedule/week/appointments/${date}`,
@@ -78,7 +78,6 @@ function Admin() {
         console.log(err);
       });
   };
-
 
   const getBookedAppointments = () => {
     axios({
