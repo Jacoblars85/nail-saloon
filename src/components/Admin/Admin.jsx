@@ -39,7 +39,9 @@ function Admin() {
     } else if (dateSelect === "tomorrow") {
       getTodaysAppointments(dayjs());
     } else if (dateSelect === "week") {
+      getWeeksAppointments({start: dayjs(), end: 7})
     } else if (dateSelect === "month") {
+      getWeeksAppointments({start: dayjs(), end: 31})
     } else if (dateSelect === "all") {
       getBookedAppointments();
     }
