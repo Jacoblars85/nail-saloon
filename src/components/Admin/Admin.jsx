@@ -64,10 +64,10 @@ function Admin() {
       });
   };
 
-    const getWeeksAppointments = () => {
+    const getWeeksAppointments = (date) => {
     axios({
       method: "GET",
-      url: `/api/schedule/week/appointments`,
+      url: `/api/schedule/week/appointments/${date}`,
     })
       .then((response) => {
         setTodaysAppointments(response.data);
