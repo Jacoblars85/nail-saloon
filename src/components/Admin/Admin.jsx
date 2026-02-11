@@ -70,7 +70,9 @@ function Admin() {
       url: `/api/schedule/booked/appointments`,
     })
       .then((response) => {
+        setAllAppointments(response.data);
         setTodaysAppointments(response.data);
+
       })
       .catch((err) => {
         console.log(err);
