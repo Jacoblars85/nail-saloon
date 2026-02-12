@@ -226,40 +226,6 @@ function Admin() {
         </tbody>
       </table>
 
-      {/* <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Phone Number</th>
-            <th>Time</th>
-            <th>Edit</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          {allAppointments.map((appointment) => (
-            <tr key={appointment.id} className="AdminBox">
-              <td>{appointment.name}</td>
-              <td>{appointment.phone}</td>
-              <td>
-                {dayjs(appointment.start_time).format("MM-DD-YYYY h:mm A")}
-              </td>
-              <td>
-                <button onClick={() => handleClickFormOpen(appointment)}>
-                  <EditIcon />
-                </button>
-              </td>
-
-              <td>
-                <button onClick={() => handleClickOpenDelete(appointment)}>
-                  <DeleteIcon />
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table> */}
-
       {/* Form Dialog */}
       <Dialog open={openForm} onClose={handleFormClose}>
         <DialogTitle>Edit Information</DialogTitle>
