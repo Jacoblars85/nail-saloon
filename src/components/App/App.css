@@ -233,7 +233,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items:baseline;
+  align-items: baseline;
   text-align: center;
   background-color: #e1e4e4;
 }
