@@ -4,14 +4,14 @@ Create a new database called `nail_saloon` and run the SQL in the `database.sql`
 
 ## Development Setup Instructions
 
-* Run `npm install`
-* Start postgres if not running already
-* Run `npm run server` to start the server
-* Run `npm run client` to start the client
-* Navigate to `localhost:5173`
+- Run `npm install`
+- Start postgres if not running already
+- Run `npm run server` to start the server
+- Run `npm run client` to start the client
+- Navigate to `localhost:5173`
 
 ## Lay of the Land
 
-* `src/` contains the React application
-* `public/` contains static assets for the client-side
-* `server/` contains the Express App
+- `src/` contains the React application
+- `public/` contains static assets for the client-side
+- `server/` contains the Express App
