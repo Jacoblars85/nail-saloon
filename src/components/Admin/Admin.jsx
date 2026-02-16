@@ -166,41 +166,39 @@ function Admin() {
       <h3>{dateSelect}'s Appointments</h3>
 
       <div>
+        <Box sx={{ minWidth: 120 }}>
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Today</InputLabel>
+            <Select
+              id="demo-simple-select"
+              value={dateSelect}
+              label="Date"
+              onChange={handleChangeSelectButton}
+            >
+              <MenuItem value={"today"}>Today</MenuItem>
+              <MenuItem value={"tomorrow"}>Tomorrow</MenuItem>
+              <MenuItem value={"week"}>This Week</MenuItem>
+              <MenuItem value={"month"}>This Month</MenuItem>
+              <MenuItem value={"all"}>All</MenuItem>
+            </Select>
+          </FormControl>
+        </Box>
 
-      <Box sx={{ minWidth: 120 }}>
-        <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Today</InputLabel>
-          <Select
-            id="demo-simple-select"
-            value={dateSelect}
-            label="Date"
-            onChange={handleChangeSelectButton}
-          >
-            <MenuItem value={"today"}>Today</MenuItem>
-            <MenuItem value={"tomorrow"}>Tomorrow</MenuItem>
-            <MenuItem value={"week"}>This Week</MenuItem>
-            <MenuItem value={"month"}>This Month</MenuItem>
-            <MenuItem value={"all"}>All</MenuItem>
-          </Select>
-        </FormControl>
-      </Box>
-
-      <Box sx={{ minWidth: 120 }}>
-        <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Sort</InputLabel>
-          <Select
-            id="demo-simple-select"
-            value={sortButton}
-            label="sort"
-            onChange={handleChangeSortButton}
-          >
-            <MenuItem value={"morning"}>Morning</MenuItem>
-            <MenuItem value={"afternoon"}>Afternoon</MenuItem>
-            <MenuItem value={"all"}>All</MenuItem>
-          </Select>
-        </FormControl>
-      </Box>
-
+        <Box sx={{ minWidth: 120 }}>
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Sort</InputLabel>
+            <Select
+              id="demo-simple-select"
+              value={sortButton}
+              label="sort"
+              onChange={handleChangeSortButton}
+            >
+              <MenuItem value={"morning"}>Morning</MenuItem>
+              <MenuItem value={"afternoon"}>Afternoon</MenuItem>
+              <MenuItem value={"all"}>All</MenuItem>
+            </Select>
+          </FormControl>
+        </Box>
       </div>
 
       <table>
