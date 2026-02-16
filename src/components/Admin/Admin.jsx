@@ -19,6 +19,7 @@ import Select from "@mui/material/Select";
 
 function Admin() {
   const [dateSelect, setDateSelect] = useState("today");
+  const [sortButton, setSortButton] = useState("sort");
   const [allAppointments, setAllAppointments] = useState([]);
   const [todaysAppointments, setTodaysAppointments] = useState([]);
   const [appointmentId, setAppointmentId] = useState(0);
