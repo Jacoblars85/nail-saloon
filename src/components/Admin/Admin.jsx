@@ -183,6 +183,22 @@ function Admin() {
         </FormControl>
       </Box>
 
+      <Box sx={{ minWidth: 120 }}>
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Sort</InputLabel>
+          <Select
+            id="demo-simple-select"
+            value={sortButton}
+            label="sort"
+            onChange={handleChangeSortButton}
+          >
+            <MenuItem value={"morning"}>Morning</MenuItem>
+            <MenuItem value={"afternoon"}>Afternoon</MenuItem>
+            <MenuItem value={"all"}>All</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
+
       <table>
         <thead>
           <tr>
