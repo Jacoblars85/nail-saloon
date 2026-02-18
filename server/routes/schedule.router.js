@@ -31,7 +31,23 @@ WHERE slot NOT IN (
 });
 
 router.get("/admin/appointments/:id", (req, res) => {
-  console.log("im in todays appointments route", req.params.id);
+  console.log("im in todays appointments route", req.params);
+
+  let selectType
+  let sortType
+  let date
+
+  if (dateSelect === "today" && sortButton === "booked") {
+        getTodaysAppointments(dayjs());
+      } else if (dateSelect === "tomorrow" && sortButton === "booked") {
+        getTodaysAppointments(dayjs());
+      } else if (dateSelect === "week" && sortButton === "booked") {
+        getWeeksAppointments({ start: dayjs(), end: 7 });
+      } else if (dateSelect === "month" && sortButton === "booked") {
+        getWeeksAppointments({ start: dayjs(), end: 31 });
+      } else if (dateSelect === "all" && sortButton === "booked") {
+        getBookedAppointments();
+      }
 
   const query = `
 SELECT *
