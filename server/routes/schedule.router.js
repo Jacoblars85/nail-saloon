@@ -33,33 +33,29 @@ WHERE slot NOT IN (
 router.get("/admin/appointments/:id", (req, res) => {
   console.log("im in todays appointments route", req.params);
 
-  let selectType
-  let sortType
-  let date
-  let startDay
-  let endDay
+  let selectType;
+  let sortType;
+  let date;
+  let startDay;
+  let endDay;
 
-  let query
-  let sqlValues
+  let query;
+  let sqlValues;
 
   if (dateSelect === "today" && sortButton === "booked") {
+  } else if (dateSelect === "tomorrow" && sortButton === "booked") {
+  } else if (dateSelect === "week" && sortButton === "booked") {
+  } else if (dateSelect === "month" && sortButton === "booked") {
+  } else if (dateSelect === "all" && sortButton === "booked") {
+  }
 
-      } else if (dateSelect === "tomorrow" && sortButton === "booked") {
-
-      } else if (dateSelect === "week" && sortButton === "booked") {
-
-      } else if (dateSelect === "month" && sortButton === "booked") {
-      } else if (dateSelect === "all" && sortButton === "booked") {
-
-      }
-
-   query = `
+  query = `
 SELECT *
 FROM "appointments"
 WHERE "start_time" = $1;
     `;
 
-   sqlValues = [req.params.id];
+  sqlValues = [req.params.id];
 
   pool
     .query(query, sqlValues)
