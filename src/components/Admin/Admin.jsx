@@ -49,7 +49,7 @@ function Admin() {
   };
 
   // Sort Button Funcs
-    const handleChangeSortButton = (event) => {
+  const handleChangeSortButton = (event) => {
     setSortButton(event.target.value);
   };
 
