@@ -47,6 +47,10 @@ function Admin() {
     setDateSelect(event.target.value);
   };
 
+    const handleChangeSortButton = (event) => {
+    setSortButton(event.target.value);
+  };
+
   const getTodaysAppointments = (date) => {
     console.log("date", date);
 
