@@ -43,14 +43,17 @@ function Admin() {
     }
   }, [dateSelect]);
 
+  // Select Button Funcs
   const handleChangeSelectButton = (event) => {
     setDateSelect(event.target.value);
   };
 
+  // Sort Button Funcs
     const handleChangeSortButton = (event) => {
     setSortButton(event.target.value);
   };
 
+  // Get Routes
   const getTodaysAppointments = (date) => {
     console.log("date", date);
 
