@@ -43,8 +43,12 @@ function Admin() {
     }
   }, [dateSelect]);
 
-    useEffect(() => {
-getAdminsAppointments({selectType: dateSelect, sortType: sortButton, date: dayjs()})
+  useEffect(() => {
+    getAdminsAppointments({
+      selectType: dateSelect,
+      sortType: sortButton,
+      date: dayjs(),
+    });
   }, [dateSelect, sortButton]);
 
   // Select Button Funcs
