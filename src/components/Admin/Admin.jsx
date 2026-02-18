@@ -196,7 +196,7 @@ function Admin() {
             >
               <MenuItem value={"booked"}>Booked</MenuItem>
               <MenuItem value={"open"}>Open</MenuItem>
-              <MenuItem value={"all"}>All</MenuItem>
+              <MenuItem value={"both"}>Both</MenuItem>
             </Select>
           </FormControl>
         </Box>
