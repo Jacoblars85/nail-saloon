@@ -36,17 +36,18 @@ router.get("/admin/appointments/:id", (req, res) => {
   let selectType
   let sortType
   let date
+  let startDay
+  let endDay
 
   if (dateSelect === "today" && sortButton === "booked") {
-        getTodaysAppointments(dayjs());
+
       } else if (dateSelect === "tomorrow" && sortButton === "booked") {
-        getTodaysAppointments(dayjs());
+
       } else if (dateSelect === "week" && sortButton === "booked") {
-        getWeeksAppointments({ start: dayjs(), end: 7 });
+
       } else if (dateSelect === "month" && sortButton === "booked") {
-        getWeeksAppointments({ start: dayjs(), end: 31 });
       } else if (dateSelect === "all" && sortButton === "booked") {
-        getBookedAppointments();
+
       }
 
   const query = `
