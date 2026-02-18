@@ -19,7 +19,7 @@ import Select from "@mui/material/Select";
 
 function Admin() {
   const [dateSelect, setDateSelect] = useState("today");
-  const [sortButton, setSortButton] = useState("sort");
+  const [sortButton, setSortButton] = useState("booked");
   const [allAppointments, setAllAppointments] = useState([]);
   const [todaysAppointments, setTodaysAppointments] = useState([]);
   const [appointmentId, setAppointmentId] = useState(0);
@@ -194,8 +194,8 @@ function Admin() {
               label="sort"
               onChange={handleChangeSortButton}
             >
-              <MenuItem value={"morning"}>Morning</MenuItem>
-              <MenuItem value={"afternoon"}>Afternoon</MenuItem>
+              <MenuItem value={"booked"}>Booked</MenuItem>
+              <MenuItem value={"open"}>Open</MenuItem>
               <MenuItem value={"all"}>All</MenuItem>
             </Select>
           </FormControl>
