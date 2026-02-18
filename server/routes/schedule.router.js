@@ -39,6 +39,9 @@ router.get("/admin/appointments/:id", (req, res) => {
   let startDay
   let endDay
 
+  let query
+  let sqlValues
+
   if (dateSelect === "today" && sortButton === "booked") {
 
       } else if (dateSelect === "tomorrow" && sortButton === "booked") {
@@ -50,13 +53,13 @@ router.get("/admin/appointments/:id", (req, res) => {
 
       }
 
-  const query = `
+   query = `
 SELECT *
 FROM "appointments"
 WHERE "start_time" = $1;
     `;
 
-  const sqlValues = [req.params.id];
+   sqlValues = [req.params.id];
 
   pool
     .query(query, sqlValues)
