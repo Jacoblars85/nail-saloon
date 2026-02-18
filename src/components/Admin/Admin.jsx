@@ -67,7 +67,7 @@ function Admin() {
 
     axios({
       method: "GET",
-      url: `/api/schedule/todays/appointments/${date}`,
+      url: `/api/schedule/admin/appointments/${date}`,
     })
       .then((response) => {
         setTodaysAppointments(response.data);
