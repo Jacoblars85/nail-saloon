@@ -30,6 +30,28 @@ WHERE slot NOT IN (
     });
 });
 
+router.get("/admin/appointments/:id", (req, res) => {
+  console.log("im in todays appointments route", req.params.id);
+
+  const query = `
+SELECT *
+FROM "appointments"
+WHERE "start_time" = $1;
+    `;
+
+  const sqlValues = [req.params.id];
+
+  pool
+    .query(query, sqlValues)
+    .then((result) => {
+      res.send(result.rows);
+    })
+    .catch((err) => {
+      console.log("ERROR: Get all todays appointments", err);
+      res.sendStatus(500);
+    });
+});
+
 router.get("/todays/appointments/:id", (req, res) => {
   console.log("im in todays appointments route", req.params.id);
 
