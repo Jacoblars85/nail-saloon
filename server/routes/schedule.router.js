@@ -42,21 +42,21 @@ router.get("/admin/appointments/:id", (req, res) => {
   let query;
   let sqlValues;
 
-  if (dateSelect === "today" && sortButton === "booked") {
-  } else if (dateSelect === "tomorrow" && sortButton === "booked") {
-  } else if (dateSelect === "week" && sortButton === "booked") {
-  } else if (dateSelect === "month" && sortButton === "booked") {
-  } else if (dateSelect === "all" && sortButton === "booked") {
-  } else if (dateSelect === "today" && sortButton === "open") {
-  } else if (dateSelect === "tomorrow" && sortButton === "open") {
-  } else if (dateSelect === "week" && sortButton === "open") {
-  } else if (dateSelect === "month" && sortButton === "open") {
-  } else if (dateSelect === "all" && sortButton === "open") {
-  } else if (dateSelect === "today" && sortButton === "both") {
-  } else if (dateSelect === "tomorrow" && sortButton === "both") {
-  } else if (dateSelect === "week" && sortButton === "both") {
-  } else if (dateSelect === "month" && sortButton === "both") {
-  } else if (dateSelect === "all" && sortButton === "both") {
+  if (selectType === "today" && sortButton === "booked") {
+  } else if (selectType === "tomorrow" && sortButton === "booked") {
+  } else if (selectType === "week" && sortButton === "booked") {
+  } else if (selectType === "month" && sortButton === "booked") {
+  } else if (selectType === "all" && sortButton === "booked") {
+  } else if (selectType === "today" && sortButton === "open") {
+  } else if (selectType === "tomorrow" && sortButton === "open") {
+  } else if (selectType === "week" && sortButton === "open") {
+  } else if (selectType === "month" && sortButton === "open") {
+  } else if (selectType === "all" && sortButton === "open") {
+  } else if (selectType === "today" && sortButton === "both") {
+  } else if (selectType === "tomorrow" && sortButton === "both") {
+  } else if (selectType === "week" && sortButton === "both") {
+  } else if (selectType === "month" && sortButton === "both") {
+  } else if (selectType === "all" && sortButton === "both") {
   }
 
   query = `
