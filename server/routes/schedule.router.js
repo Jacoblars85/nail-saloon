@@ -47,6 +47,16 @@ router.get("/admin/appointments/:id", (req, res) => {
   } else if (dateSelect === "week" && sortButton === "booked") {
   } else if (dateSelect === "month" && sortButton === "booked") {
   } else if (dateSelect === "all" && sortButton === "booked") {
+  } else if (dateSelect === "today" && sortButton === "open") {
+  } else if (dateSelect === "tomorrow" && sortButton === "open") {
+  } else if (dateSelect === "week" && sortButton === "open") {
+  } else if (dateSelect === "month" && sortButton === "open") {
+  } else if (dateSelect === "all" && sortButton === "open") {
+  } else if (dateSelect === "today" && sortButton === "both") {
+  } else if (dateSelect === "tomorrow" && sortButton === "both") {
+  } else if (dateSelect === "week" && sortButton === "both") {
+  } else if (dateSelect === "month" && sortButton === "both") {
+  } else if (dateSelect === "all" && sortButton === "both") {
   }
 
   query = `
