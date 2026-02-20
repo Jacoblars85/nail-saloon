@@ -42,21 +42,21 @@ router.get("/admin/appointments/:id", (req, res) => {
   let query;
   let sqlValues;
 
-  if (selectType === "today" && sortButton === "booked") {
-  } else if (selectType === "tomorrow" && sortButton === "booked") {
-  } else if (selectType === "week" && sortButton === "booked") {
-  } else if (selectType === "month" && sortButton === "booked") {
-  } else if (selectType === "all" && sortButton === "booked") {
-  } else if (selectType === "today" && sortButton === "open") {
-  } else if (selectType === "tomorrow" && sortButton === "open") {
-  } else if (selectType === "week" && sortButton === "open") {
-  } else if (selectType === "month" && sortButton === "open") {
-  } else if (selectType === "all" && sortButton === "open") {
-  } else if (selectType === "today" && sortButton === "both") {
-  } else if (selectType === "tomorrow" && sortButton === "both") {
-  } else if (selectType === "week" && sortButton === "both") {
-  } else if (selectType === "month" && sortButton === "both") {
-  } else if (selectType === "all" && sortButton === "both") {
+  if (selectType === "today" && sortType === "booked") {
+  } else if (selectType === "tomorrow" && sortType === "booked") {
+  } else if (selectType === "week" && sortType === "booked") {
+  } else if (selectType === "month" && sortType === "booked") {
+  } else if (selectType === "all" && sortType === "booked") {
+  } else if (selectType === "today" && sortType === "open") {
+  } else if (selectType === "tomorrow" && sortType === "open") {
+  } else if (selectType === "week" && sortType === "open") {
+  } else if (selectType === "month" && sortType === "open") {
+  } else if (selectType === "all" && sortType === "open") {
+  } else if (selectType === "today" && sortType === "both") {
+  } else if (selectType === "tomorrow" && sortType === "both") {
+  } else if (selectType === "week" && sortType === "both") {
+  } else if (selectType === "month" && sortType === "both") {
+  } else if (selectType === "all" && sortType === "both") {
   }
 
   query = `
