@@ -43,20 +43,50 @@ router.get("/admin/appointments/:id", (req, res) => {
   let sqlValues;
 
   if (selectType === "today" && sortType === "booked") {
+    console.log('in today booked');
+    
   } else if (selectType === "tomorrow" && sortType === "booked") {
+    console.log('in tomorrow booked');
+
   } else if (selectType === "week" && sortType === "booked") {
+    console.log('in week booked');
+
   } else if (selectType === "month" && sortType === "booked") {
+    console.log('in month booked');
+
   } else if (selectType === "all" && sortType === "booked") {
+    console.log('in all booked');
+
   } else if (selectType === "today" && sortType === "open") {
+    console.log('in today open');
+
   } else if (selectType === "tomorrow" && sortType === "open") {
+    console.log('in tomorrow open');
+
   } else if (selectType === "week" && sortType === "open") {
+    console.log('in week open');
+
   } else if (selectType === "month" && sortType === "open") {
+    console.log('in month open');
+
   } else if (selectType === "all" && sortType === "open") {
+    console.log('in all open');
+
   } else if (selectType === "today" && sortType === "both") {
+    console.log('in today both');
+
   } else if (selectType === "tomorrow" && sortType === "both") {
+    console.log('in tomorrow both');
+
   } else if (selectType === "week" && sortType === "both") {
+    console.log('in week both');
+
   } else if (selectType === "month" && sortType === "both") {
+    console.log('in month both');
+
   } else if (selectType === "all" && sortType === "both") {
+    console.log('in all both');
+
   }
 
   query = `
