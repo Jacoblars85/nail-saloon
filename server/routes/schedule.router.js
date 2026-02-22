@@ -44,8 +44,26 @@ router.get("/admin/appointments/:id", (req, res) => {
 
   if (selectType === "today" && sortType === "booked") {
     console.log("in today booked");
+
+      query = `
+SELECT *
+FROM "appointments"
+WHERE "start_time" = $1;
+    `;
+
+  sqlValues = [startDay];
+
   } else if (selectType === "tomorrow" && sortType === "booked") {
     console.log("in tomorrow booked");
+
+      query = `
+SELECT *
+FROM "appointments"
+WHERE "start_time" = $1;
+    `;
+
+  sqlValues = [startDay];
+  
   } else if (selectType === "week" && sortType === "booked") {
     console.log("in week booked");
   } else if (selectType === "month" && sortType === "booked") {
