@@ -196,13 +196,13 @@ function Admin() {
 
       <h3>{dateSelect}'s Appointments</h3>
 
-              <TextField
-                variant="outlined"
-                value={nameInput}
-                onChange={(e) => setNameInput(e.target.value)}
-                placeholder="Search"
-                size="small"
-              />
+      <TextField
+        variant="outlined"
+        value={nameInput}
+        onChange={(e) => setNameInput(e.target.value)}
+        placeholder="Search"
+        size="small"
+      />
 
       <div>
         <Box sx={{ minWidth: 120 }}>
