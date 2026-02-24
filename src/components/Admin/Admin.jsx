@@ -154,7 +154,11 @@ function Admin() {
       data: appointmentDetails,
     })
       .then((response) => {
-        getBookedAppointments();
+        getAdminsAppointments({
+      selectType: dateSelect,
+      sortType: sortButton,
+      date: dayjs(),
+    });
       })
       .catch((err) => {
         console.log(err);
@@ -181,7 +185,11 @@ function Admin() {
       data: appointmentId,
     })
       .then((response) => {
-        getBookedAppointments();
+        getAdminsAppointments({
+      selectType: dateSelect,
+      sortType: sortButton,
+      date: dayjs(),
+    });
       })
       .catch((err) => {
         console.log(err);
