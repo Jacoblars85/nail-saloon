@@ -155,10 +155,10 @@ function Admin() {
     })
       .then((response) => {
         getAdminsAppointments({
-      selectType: dateSelect,
-      sortType: sortButton,
-      date: dayjs(),
-    });
+          selectType: dateSelect,
+          sortType: sortButton,
+          date: dayjs(),
+        });
       })
       .catch((err) => {
         console.log(err);
@@ -186,10 +186,10 @@ function Admin() {
     })
       .then((response) => {
         getAdminsAppointments({
-      selectType: dateSelect,
-      sortType: sortButton,
-      date: dayjs(),
-    });
+          selectType: dateSelect,
+          sortType: sortButton,
+          date: dayjs(),
+        });
       })
       .catch((err) => {
         console.log(err);
