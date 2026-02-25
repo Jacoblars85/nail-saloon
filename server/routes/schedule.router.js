@@ -70,6 +70,13 @@ WHERE "start_time" = $1;
     console.log("in month booked");
   } else if (selectType === "all" && sortType === "booked") {
     console.log("in all booked");
+
+    query = `
+    SELECT *
+FROM "appointments";
+`
+sqlValues = [];
+
   } else if (selectType === "today" && sortType === "open") {
     console.log("in today open");
 
