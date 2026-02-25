@@ -88,6 +88,20 @@ sqlValues = [startDay];
 
   } else if (selectType === "tomorrow" && sortType === "open") {
     console.log("in tomorrow open");
+
+    query = `
+    SELECT *
+FROM generate_series(
+  $1::date + time '10:00',
+  $1::date + time '18:00',
+  interval '30 minutes'
+) AS slot
+WHERE slot NOT IN (
+  SELECT "start_time" FROM "appointments"
+);
+`
+sqlValues = [startDay];
+
   } else if (selectType === "week" && sortType === "open") {
     console.log("in week open");
   } else if (selectType === "month" && sortType === "open") {
