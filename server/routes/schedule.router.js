@@ -141,7 +141,7 @@ sqlValues = [startDay];
       res.send(result.rows);
     })
     .catch((err) => {
-      console.log("ERROR: Get all todays appointments", err);
+      console.log("ERROR: Get admin/appointments ", err);
       res.sendStatus(500);
     });
 });
