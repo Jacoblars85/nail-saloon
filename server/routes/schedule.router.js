@@ -127,13 +127,13 @@ sqlValues = [startDay];
     console.log("in all both");
   }
 
-  query = `
-SELECT *
-FROM "appointments"
-WHERE "start_time" = $1;
-    `;
+//   query = `
+// SELECT *
+// FROM "appointments"
+// WHERE "start_time" = $1;
+//     `;
 
-  sqlValues = [req.params.id];
+//   sqlValues = [req.params.id];
 
   pool
     .query(query, sqlValues)
