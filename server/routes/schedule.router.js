@@ -52,6 +52,7 @@ WHERE "start_time" = $1;
     `;
 
     sqlValues = [startDay];
+
   } else if (selectType === "tomorrow" && sortType === "booked") {
     console.log("in tomorrow booked");
 
@@ -62,6 +63,7 @@ WHERE "start_time" = $1;
     `;
 
     sqlValues = [startDay];
+
   } else if (selectType === "week" && sortType === "booked") {
     console.log("in week booked");
   } else if (selectType === "month" && sortType === "booked") {
@@ -70,6 +72,20 @@ WHERE "start_time" = $1;
     console.log("in all booked");
   } else if (selectType === "today" && sortType === "open") {
     console.log("in today open");
+
+query = `
+    SELECT *
+FROM generate_series(
+  $1::date + time '10:00',
+  $1::date + time '18:00',
+  interval '30 minutes'
+) AS slot
+WHERE slot NOT IN (
+  SELECT "start_time" FROM "appointments"
+);
+`
+sqlValues = [startDay];
+
   } else if (selectType === "tomorrow" && sortType === "open") {
     console.log("in tomorrow open");
   } else if (selectType === "week" && sortType === "open") {
