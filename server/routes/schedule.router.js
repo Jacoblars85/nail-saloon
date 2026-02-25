@@ -34,7 +34,7 @@ router.get("/admin/appointments/:id", (req, res) => {
   console.log("im in todays appointments route", req.params);
 
   let selectType = req.params.selectType;
-  let sortType;
+  let sortType = req.params.sortType;
   let date;
   let startDay;
   let endDay;
