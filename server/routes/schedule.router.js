@@ -39,8 +39,7 @@ router.get("/admin/appointments/:id", (req, res) => {
   let startDay = req.params.date;
   let endDay = selectType === "week" ? 7 : selectType === "month" ? 31 : 0;
 
-  console.log('endDay', endDay);
-  
+  console.log("endDay", endDay);
 
   let query;
   let sqlValues;
@@ -55,7 +54,6 @@ WHERE "start_time" = $1;
     `;
 
     sqlValues = [startDay];
-
   } else if (selectType === "tomorrow" && sortType === "booked") {
     console.log("in tomorrow booked");
 
@@ -66,7 +64,6 @@ WHERE "start_time" = $1;
     `;
 
     sqlValues = [startDay];
-
   } else if (selectType === "week" && sortType === "booked") {
     console.log("in week booked");
   } else if (selectType === "month" && sortType === "booked") {
@@ -77,13 +74,12 @@ WHERE "start_time" = $1;
     query = `
     SELECT *
 FROM "appointments";
-`
-sqlValues = [];
-
+`;
+    sqlValues = [];
   } else if (selectType === "today" && sortType === "open") {
     console.log("in today open");
 
-query = `
+    query = `
     SELECT *
 FROM generate_series(
   $1::date + time '10:00',
@@ -93,9 +89,8 @@ FROM generate_series(
 WHERE slot NOT IN (
   SELECT "start_time" FROM "appointments"
 );
-`
-sqlValues = [startDay];
-
+`;
+    sqlValues = [startDay];
   } else if (selectType === "tomorrow" && sortType === "open") {
     console.log("in tomorrow open");
 
@@ -109,9 +104,8 @@ FROM generate_series(
 WHERE slot NOT IN (
   SELECT "start_time" FROM "appointments"
 );
-`
-sqlValues = [startDay];
-
+`;
+    sqlValues = [startDay];
   } else if (selectType === "week" && sortType === "open") {
     console.log("in week open");
   } else if (selectType === "month" && sortType === "open") {
