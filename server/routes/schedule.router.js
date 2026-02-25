@@ -33,7 +33,7 @@ WHERE slot NOT IN (
 router.get("/admin/appointments/:id", (req, res) => {
   console.log("im in todays appointments route", req.params);
 
-  let selectType;
+  let selectType = req.params.selectType;
   let sortType;
   let date;
   let startDay;
