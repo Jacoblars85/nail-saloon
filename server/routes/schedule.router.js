@@ -36,7 +36,7 @@ router.get("/admin/appointments/:id", (req, res) => {
   let selectType = req.params.selectType;
   let sortType = req.params.sortType;
   let date;
-  let startDay;
+  let startDay = req.params.date;
   let endDay;
 
   let query;
