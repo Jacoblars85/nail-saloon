@@ -36,8 +36,8 @@ router.get("/admin/appointments/:id", (req, res) => {
   let selectType = req.params.selectType;
   let sortType = req.params.sortType;
   let date = req.params.date;
-  let startDay = req.params.date;
-  let endDay = selectType === "week" ? 7 : selectType === "month" ? 31 : 0;
+  let startDay = date;
+  let endDay = selectType === "week" ? 7 : selectType === "month" ? 31 : date;
 
   console.log("endDay", endDay);
 
