@@ -137,46 +137,46 @@ WHERE slot NOT IN (
     });
 });
 
-router.get("/todays/appointments/:id", (req, res) => {
-  console.log("im in todays appointments route", req.params.id);
+// router.get("/todays/appointments/:id", (req, res) => {
+//   console.log("im in todays appointments route", req.params.id);
 
-  const query = `
-SELECT *
-FROM "appointments"
-WHERE "start_time" = $1;
-    `;
+//   const query = `
+// SELECT *
+// FROM "appointments"
+// WHERE "start_time" = $1;
+//     `;
 
-  const sqlValues = [req.params.id];
+//   const sqlValues = [req.params.id];
 
-  pool
-    .query(query, sqlValues)
-    .then((result) => {
-      res.send(result.rows);
-    })
-    .catch((err) => {
-      console.log("ERROR: Get all todays appointments", err);
-      res.sendStatus(500);
-    });
-});
+//   pool
+//     .query(query, sqlValues)
+//     .then((result) => {
+//       res.send(result.rows);
+//     })
+//     .catch((err) => {
+//       console.log("ERROR: Get all todays appointments", err);
+//       res.sendStatus(500);
+//     });
+// });
 
-router.get("/booked/appointments", (req, res) => {
-  // console.log('im in open appointments route');
+// router.get("/booked/appointments", (req, res) => {
+//   // console.log('im in open appointments route');
 
-  const query = `
-SELECT *
-FROM "appointments";
-    `;
+//   const query = `
+// SELECT *
+// FROM "appointments";
+//     `;
 
-  pool
-    .query(query)
-    .then((result) => {
-      res.send(result.rows);
-    })
-    .catch((err) => {
-      console.log("ERROR: Get all booked appointments", err);
-      res.sendStatus(500);
-    });
-});
+//   pool
+//     .query(query)
+//     .then((result) => {
+//       res.send(result.rows);
+//     })
+//     .catch((err) => {
+//       console.log("ERROR: Get all booked appointments", err);
+//       res.sendStatus(500);
+//     });
+// });
 
 router.post("/new/appointment", (req, res) => {
   // console.log("req.body", req.body);
