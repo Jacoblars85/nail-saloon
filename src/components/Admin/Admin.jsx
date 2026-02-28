@@ -189,14 +189,14 @@ function Admin() {
 
       <h3>{dateSelect}'s Appointments</h3>
 
-<div>
-      <TextField
-        variant="outlined"
-        value={nameInput}
-        onChange={(e) => setNameInput(e.target.value)}
-        placeholder="Search"
-        size="small"
-      />
+      <div>
+        <TextField
+          variant="outlined"
+          value={nameInput}
+          onChange={(e) => setNameInput(e.target.value)}
+          placeholder="Search"
+          size="small"
+        />
 
         <Box sx={{ minWidth: 120 }}>
           <FormControl fullWidth>
