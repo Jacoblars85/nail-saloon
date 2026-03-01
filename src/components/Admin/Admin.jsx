@@ -190,6 +190,7 @@ function Admin() {
       <h3>{dateSelect}'s Appointments</h3>
 
       <div>
+        {/* search */}
         <TextField
           variant="outlined"
           value={nameInput}
@@ -198,6 +199,7 @@ function Admin() {
           size="small"
         />
 
+{/* select button */}
         <Box sx={{ minWidth: 120 }}>
           <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">Today</InputLabel>
@@ -216,6 +218,7 @@ function Admin() {
           </FormControl>
         </Box>
 
+{/* sort button */}
         <Box sx={{ minWidth: 120 }}>
           <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">Sort</InputLabel>
