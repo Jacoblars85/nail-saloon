@@ -189,6 +189,7 @@ function Admin() {
 
       <h3>{dateSelect}'s Appointments</h3>
 
+{/* appointment option buttons */}
       <div>
         {/* search */}
         <TextField
@@ -236,6 +237,7 @@ function Admin() {
         </Box>
       </div>
 
+{/* appointment table */}
       <table>
         <thead>
           <tr>
