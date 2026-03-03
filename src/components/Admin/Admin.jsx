@@ -20,6 +20,7 @@ import Select from "@mui/material/Select";
 function Admin() {
   const [dateSelect, setDateSelect] = useState("today");
   const [sortButton, setSortButton] = useState("booked");
+  const [searchInput, setSearchInput] = useState("");
   const [allAppointments, setAllAppointments] = useState([]);
   const [todaysAppointments, setTodaysAppointments] = useState([]);
   const [appointmentId, setAppointmentId] = useState(0);
@@ -194,8 +195,8 @@ function Admin() {
         {/* search */}
         <TextField
           variant="outlined"
-          value={nameInput}
-          onChange={(e) => setNameInput(e.target.value)}
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
           placeholder="Search"
           size="small"
         />
