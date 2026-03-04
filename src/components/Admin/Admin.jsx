@@ -64,6 +64,7 @@ function Admin() {
       });
   };
 
+  // Edit Dialog Funcs
   const handleClickFormOpen = (appointment) => {
     setAppointmentId(appointment.id);
     setNameInput(appointment.name);
