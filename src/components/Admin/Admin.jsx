@@ -64,48 +64,6 @@ function Admin() {
       });
   };
 
-  // const getTodaysAppointments = (date) => {
-  //   console.log("date", date);
-
-  //   axios({
-  //     method: "GET",
-  //     url: `/api/schedule/todays/appointments/${date}`,
-  //   })
-  //     .then((response) => {
-  //       setTodaysAppointments(response.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
-
-  // const getWeeksAppointments = (date) => {
-  //   axios({
-  //     method: "GET",
-  //     url: `/api/schedule/week/appointments/${date}`,
-  //   })
-  //     .then((response) => {
-  //       setTodaysAppointments(response.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
-
-  // const getBookedAppointments = () => {
-  //   axios({
-  //     method: "GET",
-  //     url: `/api/schedule/booked/appointments`,
-  //   })
-  //     .then((response) => {
-  //       setAllAppointments(response.data);
-  //       setTodaysAppointments(response.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
-
   const handleClickFormOpen = (appointment) => {
     setAppointmentId(appointment.id);
     setNameInput(appointment.name);
