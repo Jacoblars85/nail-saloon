@@ -42,7 +42,6 @@ router.get("/admin/appointments/:id", (req, res) => {
   console.log("date", date);
   console.log("endDay", endDay);
 
-
   let query;
   let sqlValues;
 
