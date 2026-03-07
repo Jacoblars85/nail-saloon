@@ -20,7 +20,7 @@ function Admin() {
   const [dateSelect, setDateSelect] = useState("today");
   const [sortButton, setSortButton] = useState("booked");
   const [searchInput, setSearchInput] = useState("");
-  const [allAppointments, setAllAppointments] = useState([]);
+  const [appointments, setAppointments] = useState([]);
   const [todaysAppointments, setTodaysAppointments] = useState([]);
   const [appointmentId, setAppointmentId] = useState(0);
   const [nameInput, setNameInput] = useState("");
