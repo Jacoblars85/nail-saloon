@@ -56,7 +56,7 @@ function Admin() {
       url: `/api/schedule/admin/appointments/${date}`,
     })
       .then((response) => {
-        setTodaysAppointments(response.data);
+        setAppointments(response.data);
       })
       .catch((err) => {
         console.log(err);
@@ -208,8 +208,8 @@ function Admin() {
           </tr>
         </thead>
         <tbody>
-          {todaysAppointments ? (
-            todaysAppointments.map((appointment) => (
+          {appointments ? (
+            appointments.map((appointment) => (
               <tr key={appointment.id} className="AdminBox">
                 <td>{appointment.name}</td>
                 <td>{appointment.phone}</td>
