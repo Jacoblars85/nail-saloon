@@ -21,7 +21,6 @@ function Admin() {
   const [sortButton, setSortButton] = useState("booked");
   const [searchInput, setSearchInput] = useState("");
   const [appointments, setAppointments] = useState([]);
-  const [todaysAppointments, setTodaysAppointments] = useState([]);
   const [appointmentId, setAppointmentId] = useState(0);
   const [nameInput, setNameInput] = useState("");
   const [phoneInput, setPhoneInput] = useState("");
