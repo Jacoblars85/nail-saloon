@@ -149,7 +149,7 @@ function Admin() {
 
       {/* appointment option buttons */}
       <div>
-        {/* search */}
+        {/* search bar */}
         <TextField
           variant="outlined"
           value={searchInput}
